@@ -1,0 +1,24 @@
+.products-sec{
+    padding: 150px 70px;
+    width: 100%;
+    background-color: rgb(214, 91, 124);
+    flex-direction: column;
+   
+
+}
+.div-products{
+ flex-wrap: wrap;
+ gap: 53px;
+}
+.products-sec h2{
+    color: white;
+     font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+.products-sec #p{
+    color:rgb(253, 234, 240) ;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 40px;
+    font-size: large;
+}

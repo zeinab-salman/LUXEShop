@@ -1,0 +1,29 @@
+import Home from "./pages/Home/Home"
+import "./index.css"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login/Login"
+import Products from "./pages/Products/Products"
+import ProductDetails from "./pages/ProductDetails/ProductDetails"
+import Register from "./pages/Register/Register"
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+{
+  /* The following line can be included in your src/index.js or App.js file */
+}
+import 'bootstrap/dist/css/bootstrap.min.css';
+export default function App() {
+  return (
+    <>
+  <NavBar/>
+    <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Products/:id" element={<ProductDetails />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Register" element={<Register />} />
+
+        </Routes>
+      <Footer/>
+    </>
+  );
+}

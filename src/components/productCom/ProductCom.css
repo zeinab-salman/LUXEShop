@@ -1,0 +1,31 @@
+.product-item {
+
+    background-color: white;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.product-item img {
+    object-fit: cover;
+    width: 240px;
+    height: 240px;
+}
+
+.product-item   p , .product-item  h3{
+    text-decoration: none !important;
+    color: rgb(194, 81, 111);
+}
+
+.product-item .img-div {
+    width: 100%;
+    height: 100%;
+}
+
+.product-item .content-div {
+    margin: 20px 0px;
+}
