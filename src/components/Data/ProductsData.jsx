@@ -1,8 +1,11 @@
-import img1 from "../../../public/images/b2.jpg"
-import img2 from "../../../public/images/c2.jpg"
-import img3 from "../../../public/images/c3.jpg"
-import img4 from "../../../public/images/c4.jpg"
-
+import img1 from "../../../public/images/d1.jpg"
+import img2 from "../../../public/images/d2.jpg"
+import img3 from "../../../public/images/d3.jpg"
+import img4 from "../../../public/images/d4.jpg"
+import img5 from "../../../public/images/d5.jpg"
+import img6 from "../../../public/images/d6.jpg"
+import img7 from "../../../public/images/d7.jpg"
+import img8 from "../../../public/images/d8.jpg"
 export const ProductsData = [
 
     {
@@ -38,14 +41,14 @@ export const ProductsData = [
     
     {
         id:5,
-        img: img1,
+        img: img5,
         name: " product1",
         price: "555$",
     }
     ,
     {
         id:6,
-        img: img2,
+        img: img6,
         name: " product2",
         price: "565$",
     }
@@ -54,7 +57,7 @@ export const ProductsData = [
     ,
     {
         id:7,
-        img: img3,
+        img: img7,
         name: " product3",
         price:
             "155$",
@@ -62,7 +65,7 @@ export const ProductsData = [
     ,
     {
         id:8,
-        img: img4,
+        img: img8,
         name: " product4",
         price: "85$",
     },

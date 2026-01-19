@@ -6,10 +6,10 @@ import ProductDetails from "../ProductDetails/ProductDetails";
 export default function Home() {
   return (
     <>
-  <Hero/>
-  <FeaturedSection/>
- 
- 
+      <Hero />
+      <FeaturedSection />
+
+
     </>
   );
 }

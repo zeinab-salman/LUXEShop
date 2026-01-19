@@ -1,10 +1,8 @@
 import './Register.css'
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import FormInput from '../../components/FormInput/FormInput';
 export default function Register() {
-
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
@@ -28,24 +26,38 @@ export default function Register() {
 
   return (
     <>
-    <section className='register-sec flex-center'>
-     
-    <form className='register-form' onSubmit={handleSubmit}>
-      <h2>Register</h2>
+      <section className='register-sec flex-center'>
 
-      <input placeholder="Full Name" onChange={(e) => setForm({...form, name: e.target.value})} />
-      <input placeholder="Email" onChange={(e) => setForm({...form, email: e.target.value})} />
-      <input type="password" placeholder="Password" onChange={(e) => setForm({...form, password: e.target.value})} />
-      <input type="password" placeholder="Confirm Password" onChange={(e) => setForm({...form, confirmPassword: e.target.value})} />
+        <form className='register-form' onSubmit={handleSubmit}>
+          <h2>Register</h2>
+          <FormInput
+            placeholder="Full Name"
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
 
-      <button type="submit">Register</button>
-    </form>
+          />
+          <FormInput
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setForm({ ...form, password: e.target.value })}
+          />
+          <FormInput
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setForm({ ...form, password: e.target.value })}
+          />
+          <FormInput
+            type="password"
+            placeholder="Confirm Password"
+            onChange={(e) => setForm({ ...form, confirmPassword: e.target.value })}
+          />
+          <button type="submit">Register</button>
+        </form>
 
 
 
 
 
-</section>
+      </section>
 
     </>
   );

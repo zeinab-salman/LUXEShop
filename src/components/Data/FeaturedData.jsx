@@ -1,7 +1,7 @@
-import img1 from "../../../public/images/b2.jpg"
-import img2 from "../../../public/images/c2.jpg"
-import img3 from "../../../public/images/c3.jpg"
-import img4 from "../../../public/images/c4.jpg"
+import img1 from "../../../public/images/d1.jpg"
+import img2 from "../../../public/images/d2.jpg"
+import img3 from "../../../public/images/d3.jpg"
+import img4 from "../../../public/images/d4.jpg"
 
 export const FeaturedData = [
 

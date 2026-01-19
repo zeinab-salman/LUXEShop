@@ -8,6 +8,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+}
+
+.product-item:hover {
+
+    box-shadow: 1px 1px 20px 0px white;
 }
 
 .product-item img {
@@ -16,9 +22,11 @@
     height: 240px;
 }
 
-.product-item   p , .product-item  h3{
+.product-item p,
+.product-item h3 {
     text-decoration: none !important;
     color: rgb(194, 81, 111);
+
 }
 
 .product-item .img-div {
@@ -27,5 +35,5 @@
 }
 
 .product-item .content-div {
-    margin: 20px 0px;
+    margin: 10px 0px;
 }

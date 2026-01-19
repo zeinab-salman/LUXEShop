@@ -1,23 +1,115 @@
-.product-details{
-
+.product-details {
     width: 100%;
     padding: 100px 70px;
     padding-top: 150px;
-   background-color:rgb(214, 91, 124) ;
-   flex-direction: column;
-   gap: 30px;
+    background-color: rgb(214, 91, 124);
+    gap: 30px;
+
 }
-.product-details h2{
-    color: white;
+
+.product-details .details {
+    gap: 40px;
+}
+
+.product-details h2 {
+    color: black;
     font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 80px;
 }
-.product-details p{color:yellow;
-font-size: larger;}
-.product-details select{
-    width:50%
-   padding:10px;
+
+#price {
+    color: rgb(142, 42, 68);
+    background-color: rgb(248, 196, 210);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    text-align: center;
+    width: 40%;
+    font-weight: bold;
 }
-.product-details img{
-    border-radius: 7%;
-    width:15rem;
+
+
+.select {
+    width: 24rem !important;
+    padding: 100px;
+    margin-top: 10px;
+
+}
+
+.product-details img {
+    border-radius: 10px;
+    width: 26rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.details {
+    flex-direction: column;
+    width: 50%;
+}
+
+.details1 {
+    width: 50%;
+
+}
+
+.product-details .select-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-details .bg-details {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5rem;
+    border-radius: 50px;
+    gap: 50px;
+
+}
+
+@media (max-width:1200px) {
+    .bg-details {
+        flex-wrap: wrap;
+        width: 100vw;
+        flex-direction: column-reverse;
+        padding: 30px !important;
+
+    }
+
+    .select {
+        width: 29rem !important;
+
+    }
+
+    .bg-details img {
+        width: 100% !important;
+
+    }
+
+    #price {
+        width: 20%;
+    }
+
+    .product-details h2 {
+        margin-bottom: 20px;
+    }
+
+    .product-details .details {
+        width: 100%;
+    }
+}
+
+@media (max-width:542px) {
+    .select {
+        width: 100% !important;
+    }
+
+    #price {
+        width: 40%;
+    }
 }

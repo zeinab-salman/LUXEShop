@@ -2,6 +2,9 @@
     color:rgb(253, 234, 240) ;
     text-align: center;
     width: 60%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     font-size: large;
+}
+@media (max-width:1000px) {
+    .text1{display: none;}
 }

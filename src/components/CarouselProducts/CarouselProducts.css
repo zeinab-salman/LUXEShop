@@ -1,0 +1,59 @@
+.caption {
+    display: none;
+}
+
+.carouselPro:hover {
+    .caption {
+        display: block;
+
+    }
+}
+
+.carouselPro {
+    width: 650px !important;
+    margin-top: 30px;
+    height: 300px !important;
+
+}
+
+.carousel-control-next-icon {
+    display: none !important;
+}
+
+.carousel-control-prev-icon {
+    display: none !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 50% !important;
+    background-color: rgb(214, 91, 124) !important;
+}
+
+.carouselPro img {
+    width: 100% !important;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carouselPro p {
+    color: white;
+}
+
+@media (max-width:1200px) {
+    .carouselPro {
+        width: 500px !important;
+        height: 500px !important;
+    }
+    
+}
+
+@media (max-width:594px) {
+    .carouselPro {
+        width: 300px !important;
+        margin-top: 30px;
+        height: 300px !important;
+    }
+
+}
