@@ -1,0 +1,19 @@
+.collection-section {
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 150px 70px;
+
+
+}
+
+.collection-section .collections-div {
+    gap: 53px;
+
+}
+@media (max-width:1000px) {
+    .collections-div{
+        gap:10px;
+        width: 100%;
+    }
+}

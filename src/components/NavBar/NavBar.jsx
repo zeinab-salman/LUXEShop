@@ -32,7 +32,7 @@ export default function NavBar() {
   return (
     <nav className={`z-navbar ${mascroll ? 'z-nav2' : ''}`} onClick={listdown}>
       <div className='logo'>
-        <h1>ZShop</h1>
+        <h1>LUXE<span id='nav-right'>SHOP</span> </h1>
 
       </div>
       <div className="btn-open" onClick={listdown}>
@@ -47,16 +47,11 @@ export default function NavBar() {
         <li>
           <NavLink to={'/Login'} onClick={listdown}>Login</NavLink>
         </li>
-        <li>
-          <NavLink to={'/Register'} onClick={listdown}>Register</NavLink>
-        </li>
+       
         <li>
           <NavLink to={'/Products'} className='z-details' onClick={listdown}>Products</NavLink>
         </li>
-        <li>
-          <NavLink to={`/ProductsDetails`} className='z-details' onClick={listdown}>Product Details</NavLink>
-
-        </li>
+        
       </ul>
 
     </nav>

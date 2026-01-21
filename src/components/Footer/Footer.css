@@ -1,13 +1,74 @@
-footer{
+footer {
 
-    background-color: white;
+    background-color: var(--navbar-color);
     padding: 40px;
+    flex-direction: column;
+    padding: 40px 70px;
 
 }
-footer p{
+
+.footer-div1 {
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.footer-develop{
+    gap: 653px;
+}
+footer p {
     width: 100%;
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
-    color: rgb(214, 91, 124);
+    color: white;
+    font-size: 2rem;
+    font-family: "Crimson Text", serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--logo-color);
+
+}
+
+.footer-logo {
+    width: 100%;
+}
+
+.footer-logo h2 {
+    color: white;
+    font-size: 2.6rem;
+}
+
+#join-text {
+    width: 50%;
+}
+#develop-text{
+    margin-top: 40px;
+}
+
+.footer-logo p {
+    width: 50%;
+    font-size: medium;
+    text-align: start;
+}
+
+#logo {
+    color: var(--logo-color);
+}
+@media (max-width:1000px) {
+    .footer-logo{
+       width: min-content;
+    }
+    .footer-logo p{
+        width:100%
+    }
+    .footer-develop{
+        gap: 20px;
+    }
 }

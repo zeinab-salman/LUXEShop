@@ -12,19 +12,21 @@ export default function ProductCom({ id, img, name, price }) {
                 whileInView={{ scale: 1.05 }}
                 className='motion-div'
             >
-                <div className="product-item"  >
-                    <div className="img-div">
-                        <img src={img} alt="photo" />
-                    </div>
-                    <div className="content-div">
-                        <h3>{name}</h3>
-                        <p>{price}</p>
-                        <Link to={`/Products/${id}`}  >
-                            <Button text="Details" type="product-item-btn" />
-                        </Link>
-                    </div>
-                </div>
-            </motion.div>
+                <Link to={`/Products/${id}`} className="Link">
+                    <div className="product-item"  >
+                        <div className="img-div">
+                            <img src={img} alt="photo" />
+                        </div>
+                        <div className="content-div">
+                            <h3>{name}</h3>
+                            <p>{price}</p>
+                            <Link to={`/Products/${id}`}  >
+                                <Button text="Details" type="product-item-btn" />
+                            </Link>
+                        </div>
+            </div>
+             </Link>
+        </motion.div >
 
         </>
     );

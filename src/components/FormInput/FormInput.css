@@ -1,11 +1,12 @@
 .form-input {
     margin: 12px;
     padding: 10px 0px;
-    width: 80%;
+    width: 70%;
     border-radius: 4rem;
     padding-left: 10px;
-    border: 2px solid rgb(214, 91, 124);
-    box-shadow: 1px 1px 10px 0px rgb(214, 91, 124);
+    border: 2px solid var(--navbar-color);
+    box-shadow: 1px 1px 10px 0px var(--logo-color);
+    
 }
 
 .div-input {
@@ -14,4 +15,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  
+}
+@media (max-width:600px) {
+    .form-input{
+        width: 100%;
+    }
 }

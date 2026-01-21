@@ -8,8 +8,9 @@ export default function Products() {
             <section className="products-sec flex-center">
                 <Title
                     title=" Products"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugit molestias repellat quidem distinctio et placeat ipsum consectetur nisi recusandae ullam provident ex, labore laboriosam totam harum quibusdam. Harum, repellendus?  "
-                    type="text1"
+                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugit molestias repellat quidem distinctio et placeat ipsum consectetur nisi recusandae ullam provident ex,  "
+                    line="line-sec"
+                    type="sections-description"
                 />
                 <div className="flex-center div-products">
                     {

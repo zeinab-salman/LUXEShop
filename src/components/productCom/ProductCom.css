@@ -1,5 +1,4 @@
 .product-item {
-
     background-color: white;
     border-radius: 2rem;
     overflow: hidden;
@@ -12,8 +11,7 @@
 }
 
 .product-item:hover {
-
-    box-shadow: 1px 1px 20px 0px white;
+    box-shadow: 1px 1px 20px 0px var(--logo-color);
 }
 
 .product-item img {
@@ -25,8 +23,12 @@
 .product-item p,
 .product-item h3 {
     text-decoration: none !important;
-    color: rgb(194, 81, 111);
+    color: var(--navbar-color);
 
+}
+.product-item p{
+    color: var(--logo-color);
+    font-weight: bolder;
 }
 
 .product-item .img-div {
@@ -36,4 +38,7 @@
 
 .product-item .content-div {
     margin: 10px 0px;
+}
+.Link {
+    text-decoration: none !important;
 }

@@ -7,23 +7,34 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails"
 import Register from "./pages/Register/Register"
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import Loading from "./pages/Loading/Loading";
+import { useState, useEffect } from 'react'
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-  <NavBar/>
-    <Routes>
+      <NavBar />
+      {loading ? <Loading /> :
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Products/:id" element={<ProductDetails />} />
           <Route path="/Products" element={<Products />} />
           <Route path="/Register" element={<Register />} />
 
-        </Routes>
-      <Footer/>
+        </Routes>}
+      <Footer />
     </>
   );
 }
