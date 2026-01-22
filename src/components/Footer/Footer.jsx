@@ -17,12 +17,13 @@ export default function Footer() {
         <p id="join-text"> Join the LuxeShop Family </p>
        
         </div>
-        <div className="flex-center footer-develop">
+        <div className=" footer-develop">
           <p id="develop-text">Developed By <a href="https://algo-code.com">AlgoCode</a></p>
+          <Link to="/Register">
         <Button 
         text="Register"
         type="hero-btn " />
-        
+        </Link>
        </div>
       </footer>
     </>

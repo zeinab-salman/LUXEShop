@@ -51,7 +51,9 @@ export default function NavBar() {
         <li>
           <NavLink to={'/Products'} className='z-details' onClick={listdown}>Products</NavLink>
         </li>
-        
+         <li>
+          <NavLink to={'/About'} className='z-details' onClick={listdown}>About</NavLink>
+        </li>
       </ul>
 
     </nav>

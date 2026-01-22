@@ -1,0 +1,11 @@
+.about-us-section{
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 100px;
+    background-color: var(--bg-color);
+}
+.about-us-section .about-us-div{
+    gap: 40px;
+    margin-top: 50px;
+}
+

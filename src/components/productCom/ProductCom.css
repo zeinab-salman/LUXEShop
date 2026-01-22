@@ -28,7 +28,8 @@
 }
 .product-item p{
     color: var(--logo-color);
-    font-weight: bolder;
+   font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .product-item .img-div {

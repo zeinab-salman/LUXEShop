@@ -8,6 +8,7 @@ import Register from "./pages/Register/Register"
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Loading from "./pages/Loading/Loading";
+import About from "./pages/About/About"
 import { useState, useEffect } from 'react'
 {
   /* The following line can be included in your src/index.js or App.js file */
@@ -32,7 +33,7 @@ export default function App() {
           <Route path="/Products/:id" element={<ProductDetails />} />
           <Route path="/Products" element={<Products />} />
           <Route path="/Register" element={<Register />} />
-
+          <Route path="/About" element={<About />} />
         </Routes>}
       <Footer />
     </>

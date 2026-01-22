@@ -7,13 +7,12 @@ const TypeWriterText = ({ text ,type}) => {
     visible: (i = 1) => ({
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // التأخير بين كل حرف والآخر
+        staggerChildren: 0.1, 
         delayChildren: 0.04 * i
       },
     }),
   };
 
-  // إعدادات الحركة لكل حرف (الابن)
   const childVariants = {
     visible: {
       opacity: 1,

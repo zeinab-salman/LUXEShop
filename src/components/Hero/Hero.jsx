@@ -25,7 +25,7 @@ export default function Hero() {
             />
             <TypeWriterText text="Discover our curated collection of timeless pieces crafted with unparalleled attention to detail and quality.  " type="text1" />
           </div>
-               </motion.div>
+        </motion.div>
         <Link to={'/Products'} className="btn-hero"><Button text="products" type="hero-btn" /></Link>
       </section>
     </>
