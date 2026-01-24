@@ -26,7 +26,7 @@ export default function AboutHero() {
                         <TypeWriterText text=" More than a brand, we are a curated experience for those who appreciate the finer things in life. Welcome to our world. " type="text1" />
                       </div>
                            </motion.div>
-                    <Link to={'/Products'} className="btn-hero"><Button text="products" type="hero-btn" /></Link>
+                    <Link to={'/Contact'} className="btn-hero"><Button text="Contact Us" type="hero-btn" /></Link>
                   </section>
              
                    

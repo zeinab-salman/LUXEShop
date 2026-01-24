@@ -8,8 +8,10 @@ import img2 from "../../../public/images/d2.jpg"
 import img3 from "../../../public/images/d3.jpg"
 import img4 from "../../../public/images/d4.jpg"
 import img5 from "../../../public/images/d5.jpg"
-import { main } from "framer-motion/client";
+import { useCart } from '../UserCart/CartProvider';
 export default function ProductDetails() {
+  const { addToCart } = useCart();
+
   const { id } = useParams();
   const product = ProductsData.find(p => p.id === Number(id));
   if (!product) return <h2 id="not-found">Product Not Found </h2>;
@@ -94,6 +96,12 @@ export default function ProductDetails() {
 
           <Button text={`Add to Cart —${product.price} `}
             type="details-btn"
+            onClick={() => addToCart({
+              ...product,
+              quantity:quantity,
+             size: selectedSize,
+             color: selectedColor
+            })}
           />
         </div>
       </section>

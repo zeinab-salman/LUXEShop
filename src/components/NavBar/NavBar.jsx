@@ -1,5 +1,5 @@
 import './NavBar.css'
-
+import { FaCartShopping } from "react-icons/fa6";
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -53,6 +53,13 @@ export default function NavBar() {
         </li>
          <li>
           <NavLink to={'/About'} className='z-details' onClick={listdown}>About</NavLink>
+
+        </li>
+         <li>
+          <NavLink to={'/Contact'} className='z-details' onClick={listdown}>Contact</NavLink>
+        </li>
+         <li>
+          <NavLink to={'/UserCart'} className='z-details cart-icon' onClick={listdown}>< FaCartShopping /></NavLink>
         </li>
       </ul>
 

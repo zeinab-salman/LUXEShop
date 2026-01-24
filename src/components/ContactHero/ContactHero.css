@@ -1,0 +1,48 @@
+
+.hero-contact {
+  width: 100%;
+  height: 90vh;
+  background-image: url("../../../public/images/contacthero.png");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+
+}
+
+.hero-contact h2 {
+  color: white;
+  font-size: 4rem;
+  width: 70%;
+  font-weight: bold;
+
+}
+
+.layer-contact {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  background-color: #121a2b7d;
+  z-index: 0 !important;
+}
+
+@media (max-width:1000px) {
+  .hero-contact p {
+
+    text-align: center;
+    width: 24rem;
+
+  }
+
+  .hero-contact h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10px;
+    width: 15rem;
+
+
+  }
+}

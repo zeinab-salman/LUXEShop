@@ -9,7 +9,11 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Loading from "./pages/Loading/Loading";
 import About from "./pages/About/About"
+import Contact from "./pages/Contact/Contact"
+import UserCart from "./pages/UserCart/UserCart";
 import { useState, useEffect } from 'react'
+import { Router } from "react-router-dom";
+import { CartProvider } from "./pages/UserCart/CartProvider";
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -25,8 +29,10 @@ export default function App() {
 
   return (
     <>
+   <CartProvider>
       <NavBar />
       {loading ? <Loading /> :
+    
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
@@ -34,8 +40,14 @@ export default function App() {
           <Route path="/Products" element={<Products />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/About" element={<About />} />
-        </Routes>}
+            <Route path="/Contact" element={<Contact />} />
+           
+             <Route path="/UserCart" element={<UserCart />} />
+             
+        </Routes>
+       }
       <Footer />
+     </CartProvider>
     </>
   );
 }
