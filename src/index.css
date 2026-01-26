@@ -13,8 +13,11 @@ h3 {
   font-family: "Crimson Text", serif;
   font-weight: bold;
   font-style: normal;
-}
 
+}
+h2{
+  font-size: 2.6rem !important;
+}
 .flex-center {
   display: flex;
   align-items: center;
@@ -27,6 +30,7 @@ h3 {
   --navbar-color: #121a2b;
   --btn-color: #3c83f6;
   --bg-color: #f8fafc;
+  --bg2-color:#f5f8fc ;
 }
 
 @media (max-width:1000px) {

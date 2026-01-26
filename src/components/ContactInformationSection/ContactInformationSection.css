@@ -1,30 +1,24 @@
 .contact-section {
     flex-direction: column;
     width: 100%;
-    padding: 100px 100px;
+    padding: 50px 100px;
     background-color: var(--bg-color);
-
-
 }
 
 .contact-form {
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 80px 20px;
     border: 2px solid var(--logo-color);
-    width: 53%;
+    width: 42rem;
     border-radius: 5%;
     background-color: #121a2bea;
     box-shadow: 1px 1px 20px 0px white;
-
-
 }
 
 .contact-form button {
-
     background-color: white;
     border: none;
     background-color: var(--btn-color);
@@ -41,7 +35,6 @@
     margin-top: 50px;
     width: 100%;
     align-items: start;
-
 }
 
 .map {
@@ -50,11 +43,8 @@
     width: 100%;
 }
 
-#message-input {
-    padding: 40px 10px;
-   
-    border-radius: 1rem;
-    width: 70%;
+#message {
+    padding: 20px 20px;
 }
 
 .contact-section .info {
@@ -64,9 +54,11 @@
     align-items: self-start;
     justify-content: center;
 }
-.contact-section .contact-form .contact-text{
+
+.contact-section .contact-form .contact-text {
     color: white !important;
 }
+
 @media (max-width:1000px) {
     .contact-form {
         width: 100%;
@@ -87,15 +79,13 @@
         width: 100% !important;
         padding: 0px;
         gap: 20px;
-      
-
     }
 
     .contact-section .contact-info2 .map {
         width: 100% !important;
     }
-    #message-input {
-   width: 100%;
-}
-.info{width: 100% !important;}
+
+    .info {
+        width: 100% !important;
+    }
 }

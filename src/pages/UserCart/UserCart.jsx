@@ -14,7 +14,7 @@ export default function UserCart() {
     return (
       <section className="cart-container empty-cart">
         <h2>Your cart is empty 🛒</h2>
-        <Link to="/"><Button text="Go Back to Shopping" type="hero-btn"/></Link>
+        <Link to="/"><Button text="Go Back to Shopping" type="hero-btn" /></Link>
       </section>
     );
   }
@@ -30,11 +30,12 @@ export default function UserCart() {
 
           {cartItems.map((item) => (
             <div key={item.id} className="product-cart" >
-              <img src={item.img} alt={item.name} width="80" />
-              <div className="">
+              <img src={item.img} alt={item.name}  />
+              <div className="cart-right">
                 <h3>{item.name}</h3>
                 <p>Price: ${item.price}</p>
               </div>
+            
               <div className="quantity-selector">
                 <button onClick={() => updateQuantity(item.id, -1)} className="qty-btn">−</button>
                 <span className="qty-number"> {item.quantity}</span>

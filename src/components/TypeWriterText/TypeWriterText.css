@@ -1,12 +1,12 @@
 .text1 span {
-
   color: rgb(253, 234, 240) !important;
   text-align: center;
   text-align: center;
-  font-size: large;
+  font-size: 1.3rem;
   display: inline;
   max-width: 60%;
   white-space: normal;
   overflow-wrap: break-word;
   word-break: break-word;
+
 }

@@ -47,18 +47,21 @@ export default function NavBar() {
         <li>
           <NavLink to={'/Login'} onClick={listdown}>Login</NavLink>
         </li>
-       
+
         <li>
           <NavLink to={'/Products'} className='z-details' onClick={listdown}>Products</NavLink>
         </li>
-         <li>
+        <li>
           <NavLink to={'/About'} className='z-details' onClick={listdown}>About</NavLink>
 
         </li>
-         <li>
+        <li>
           <NavLink to={'/Contact'} className='z-details' onClick={listdown}>Contact</NavLink>
         </li>
          <li>
+          <NavLink to={'/Collection'} className='z-details' onClick={listdown}>Collections</NavLink>
+        </li>
+        <li>
           <NavLink to={'/UserCart'} className='z-details cart-icon' onClick={listdown}>< FaCartShopping /></NavLink>
         </li>
       </ul>

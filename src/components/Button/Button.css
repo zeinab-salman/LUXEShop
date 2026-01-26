@@ -1,5 +1,5 @@
-.hero-btn{
-    background-color:var(--btn-color) ;
+.hero-btn {
+    background-color: var(--btn-color);
     color: white;
     border-radius: 5%;
     padding: 10px 40px;
@@ -7,16 +7,18 @@
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 50px;
-    
+
 }
-.hero-btn:hover{
+
+.hero-btn:hover {
     background-color: white;
-    color:var(--btn-color)  ;
-  
-   transition: 0.1s;
+    color: var(--btn-color);
+
+    transition: 0.1s;
 }
-.details-btn{
-  background-color:var(--btn-color) ;
+
+.details-btn {
+    background-color: var(--btn-color);
     color: white;
     border-radius: 5%;
     padding: 15px 146px;
@@ -24,50 +26,59 @@
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 50px;
-    
-}
-.details-btn:hover{
-   background-color: white;
-    color:var(--btn-color)  ;
-   transition: 0.1s;
 
 }
-.product-item-btn{
-    background-color:var(--btn-color) ;
+
+.details-btn:hover {
+    background-color: white;
+    color: var(--btn-color);
+    transition: 0.1s;
+
+}
+
+.product-item-btn {
+    background-color: var(--btn-color);
     color: white;
     border-radius: 5%;
     padding: 10px 20px;
     border: none;
     font-weight: bold;
     margin-top: 10px;
-   
+
 }
-.product-item-btn:hover{
+
+.product-item-btn:hover {
     background-color: white;
-    color:var(--btn-color) ;
-    border: 2px solid var(--btn-color)  ;
+    color: var(--btn-color);
+    border: 2px solid var(--btn-color);
     transition: 0.5s;
 }
-.cart{
+
+.cart {
 
     background-color: white;
-     color: var(--btn-color);
+    color: var(--btn-color);
     border-radius: 5%;
     padding: 10px 20px;
     border: none;
     font-weight: bold;
     margin-top: 10px;
 }
-.cart:hover{
+
+.cart:hover {
     background-color: var(--btn-color);
-    color:white;
-    border:2px solid white;
+    color: white;
+    border: 2px solid white;
 }
-@media(max-width:1000px){
 
-    .hero-btn{margin-top: 10px;}
-   .details-btn{
+@media(max-width:1000px) {
 
-    padding: 15px 40px;
-   }
+    .hero-btn {
+        margin-top: 10px;
+    }
+
+    .details-btn {
+
+        padding: 15px 40px;
+    }
 }

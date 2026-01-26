@@ -1,19 +1,25 @@
 .collection-section {
     width: 100%;
     flex-direction: column;
-    background-color: var(--bg-color);
+    background-color: var(--bg2-color);
     padding: 150px 70px;
-
-
 }
 
 .collection-section .collections-div {
-    gap: 53px;
+    width: 100%;
+    gap: 4.5%;
+    padding-top: 30px;
 
 }
+
 @media (max-width:1000px) {
-    .collections-div{
-        gap:10px;
+    .collection-section .collections-div {
+        gap: 60px !important;
         width: 100%;
     }
+}
+@media (max-width:800px) {
+   .collection-section{
+    padding:150px 30px ;
+   }
 }

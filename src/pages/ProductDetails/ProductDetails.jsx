@@ -94,13 +94,13 @@ export default function ProductDetails() {
             </div>
           </div>
 
-          <Button text={`Add to Cart —${product.price} `}
+          <Button text={`Add to Cart — $${product.price} `}
             type="details-btn"
             onClick={() => addToCart({
               ...product,
-              quantity:quantity,
-             size: selectedSize,
-             color: selectedColor
+              quantity: quantity,
+              size: selectedSize,
+              color: selectedColor
             })}
           />
         </div>

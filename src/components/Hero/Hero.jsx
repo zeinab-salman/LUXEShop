@@ -17,8 +17,6 @@ export default function Hero() {
           className=''
         >
           <div className="flex-center hero-div1">
-
-
             <Title title="Elevate Your "
               span="Style"
               text=""

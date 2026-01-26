@@ -1,13 +1,10 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-
 const CartContext = createContext();
-
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem('myCart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
-
   useEffect(() => {
     localStorage.setItem('myCart', JSON.stringify(cartItems));
   }, [cartItems]);
@@ -32,16 +29,12 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     setCartItems(prev => prev.filter(item => item.id !== id));
   };
-
-
   const updateQuantity = (id, amount) => {
     setCartItems(prev => prev.map(item =>
       item.id === id ? { ...item, quantity: Math.max(1, item.quantity + amount) } : item
     ));
   };
-
   const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-
   return (
     <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, totalPrice }}>
       {children}

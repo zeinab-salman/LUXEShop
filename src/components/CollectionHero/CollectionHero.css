@@ -1,0 +1,67 @@
+.hero-collection {
+  width: 100%;
+  height: 85vh;
+  background-image: url("../../../public/images/collection-hero1.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+
+}
+
+.hero-collection h2 {
+  color: white;
+  font-size: 4.3rem !important;
+  width: 70%;
+  font-weight: bold;
+
+}
+
+.layer-collection {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  background-color: #121a2b7d;
+  z-index: 0 !important;
+}
+
+@media (max-width:1024px) {
+  .hero-collection p {
+
+    text-align: center;
+    width: 24rem;
+
+  }
+
+  .hero-collection h2 {
+    font-size: 3.3rem !important;
+    text-align: center;
+    margin-top: 10px;
+    width: 15rem;
+
+
+  }
+
+  .hero-collection {
+    justify-content: center;
+  }
+
+  .hero-collection p {
+
+    text-align: center;
+    width: 24rem;
+
+  }
+
+}
+
+@media (max-width:524px) {
+  .hero-collection p {
+    font-size: 1rem;
+    width: 15rem;
+    margin-top: 5px;
+  }
+}

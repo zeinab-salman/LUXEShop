@@ -6,33 +6,33 @@ import img4 from "../../../public/images/product4.jpg"
 export const FeaturedData = [
 
     {
-        id:1,
+        id: 1,
         img: img1,
         name: " product1",
-        price: "555$",
+        price: "555",
     }
     ,
     {
-        id:2,
+        id: 2,
         img: img2,
         name: " product2",
-        price: "565$",
+        price: "565",
     }
 
 
     ,
     {
-        id:3,
+        id: 3,
         img: img3,
         name: " product3",
         price:
-            "155$",
+            "155",
     }
     ,
     {
-        id:4,
+        id: 4,
         img: img4,
         name: " product4",
-        price: "85$",
+        price: "85",
     }
 ]

@@ -1,7 +1,6 @@
 import "./ShopFeatureComponent.css"
 import { motion } from "framer-motion";
-export default function ShopFeatureComponent({ title, text, icon: Icon }) {
-
+export default function ShopFeatureComponent({ title, text, divIcon }) {
     return (
         <>
             <motion.div
@@ -12,7 +11,9 @@ export default function ShopFeatureComponent({ title, text, icon: Icon }) {
                 className='motion-div'
             >
                 <div className="feature-div">
-                    <div className="icon-div"> <Icon size={24} /></div>
+                    <div className="">
+                        {divIcon}
+                    </div>
                     <h3>{title}</h3>
                     <p>{text}</p>
                 </div>

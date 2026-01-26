@@ -9,64 +9,72 @@ import img8 from "../../../public/images/d8.jpg"
 export const ProductsData = [
 
     {
-        id:1,
+        id: 1,
         img: img1,
         name: " product1",
         price: 555,
+        categor: "bags"
     }
     ,
     {
-        id:2,
+        id: 2,
         img: img2,
         name: " product2",
         price: 565,
+        categor: "shoes"
     }
 
 
     ,
     {
-        id:3,
+        id: 3,
         img: img3,
         name: " product3",
         price:
             155,
+        categor: "clothes"
     }
     ,
     {
-        id:4,
+        id: 4,
         img: img4,
         name: " product4",
         price: 85,
+        categor: "shoes"
     },
-    
+
     {
-        id:5,
+        id: 5,
         img: img5,
         name: " product1",
         price: 555,
+        categor: "shoes"
     }
     ,
     {
-        id:6,
+        id: 6,
         img: img6,
         name: " product2",
         price: 565,
+        categor: "shoes"
     }
 
 
     ,
     {
-        id:7,
+        id: 7,
         img: img7,
         name: " product3",
         price:
             155,
+        categor: "shoes"
     }
     ,
     {
-        id:8,
+        id: 8,
         img: img8,
         name: " product4",
         price: 85,
+        categor: "clothes"
     },
 ]

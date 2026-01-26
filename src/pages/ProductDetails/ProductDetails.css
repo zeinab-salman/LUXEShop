@@ -1,5 +1,3 @@
-
-
 .product-details {
     width: 100%;
     padding: 100px 70px;
@@ -15,8 +13,8 @@
 .product-container {
     display: flex;
     gap: 40px;
-  
-   
+
+
     color: white;
     padding: 140px 70px;
 }
@@ -62,7 +60,7 @@
 }
 
 .thumb-img.active {
-    border-color:var(--logo-color);
+    border-color: var(--logo-color);
 }
 
 .product-details {
@@ -114,7 +112,7 @@
 }
 
 .color-dot.active {
-    border-color:var(--logo-color);
+    border-color: var(--logo-color);
 }
 
 .size-options {
@@ -153,10 +151,11 @@
     background: #357abd;
 }
 
-#not-found{
+#not-found {
 
     color: var(--navbar-color);
 }
+
 .quantity-selector {
     display: flex;
     align-items: center;
@@ -177,7 +176,7 @@
 }
 
 .qty-btn:hover {
-    background-color: #f0f0f0;
+    background-color:var(--btn-color);
 }
 
 .qty-number {
@@ -187,45 +186,54 @@
     font-size: 1rem;
     color: #000;
 }
+
 @media (max-width:1000px) {
-    .product-container{
+    .product-container {
 
         flex-wrap: wrap;
     }
-    .quantity-selector{
+
+    .quantity-selector {
         flex-wrap: wrap;
     }
-    .size-options{
+
+    .size-options {
 
         flex-wrap: wrap;
     }
-    .product-details{
+
+    .product-details {
         width: 100%;
         padding: 20px;
     }
-    .product-container{
+
+    .product-container {
         width: 100%;
-        padding:100px 20px;
-       flex-direction: column;
+        padding: 100px 20px;
+        flex-direction: column;
     }
-    .main-img{
-        width:100%;
+
+    .main-img {
+        width: 100%;
         height: 100%;
     }
-    .main-img-container{
-       display: flex;
-       align-items: center;
-       justify-content: center;
+
+    .main-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 70%;
         height: 400px;
     }
-    .image-gallery{
-       display: flex;
-       align-items: center;
-       justify-content: center;
+
+    .image-gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
     }
-    .thumbnails{
+
+    .thumbnails {
         flex-wrap: wrap;
     }
 }

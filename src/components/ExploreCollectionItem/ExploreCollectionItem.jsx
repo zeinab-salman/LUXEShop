@@ -8,11 +8,11 @@ export default function ExploreCollectionItem({ img, title }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 whileInView={{ scale: 1.05 }}
-                className='motion-div'
+                className='motion-div2'
             >
                 <div className="collection-item">
                     <div className="collection-layer"></div>
-                    <img src={img} alt={title} />
+                    <div className="img-div-collection"><img src={img} alt={title} /></div>
                     <h3>{title}</h3>
                 </div>
             </motion.div>

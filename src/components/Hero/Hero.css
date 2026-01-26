@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 95vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,23 +9,29 @@
   background-image: url("../../../public/images/heroBg3.png");
   background-position: center;
   background-size: cover;
-  position:relative;
+  position: relative;
 
 }
-.layer{width:100%;
-height:100% !important;
-position:absolute;
-background-color: #121a2b7d;
-z-index: 0 !important;
+
+.layer {
+  width: 100%;
+  height: 100% !important;
+  position: absolute;
+  background-color: #121a2b7d;
+  z-index: 0 !important;
 
 
 }
+
 .hero-div1 {
   flex-direction: column;
   text-align: center;
   z-index: 10 !important;
 }
-.btn-hero{z-index: 10;}
+
+.btn-hero {
+  z-index: 10;
+}
 
 .left-hero {
   width: 58% !important;
@@ -34,29 +40,23 @@ z-index: 0 !important;
 .hero h2 {
 
   color: white;
-  font-size: 4rem;
+  font-size: 4.3rem !important;
   width: 70%;
   font-weight: bold;
-  
- 
-}
-.hero p{
-  color:rgb(221, 219, 219) !important;
 
-  
-}
-.hero span{
-  color:var(--logo-color)
 
 }
 
 .hero p {
+  color: rgb(221, 219, 219) !important;
 
-  color: rgb(48, 33, 46);
-  font-size: larger;
-  width: 70%;
-  margin-top: 20px;
+
 }
+
+.hero span {
+  color: var(--logo-color)
+}
+
 
 .hero img {
   object-fit: cover;
@@ -68,22 +68,23 @@ z-index: 0 !important;
 
 
 @media (max-width:1028px) {
-  .layer{
+  .layer {
     top: 0px;
   }
+
   .hero p {
-   
+
     text-align: center;
     width: 24rem;
 
   }
 
   .hero h2 {
-   font-size:3rem;
+
     text-align: center;
     margin-top: 10px;
     width: 15rem;
-
+    font-size: 3.3rem !important;
 
   }
 
@@ -104,7 +105,9 @@ z-index: 0 !important;
 
   }
 
-
+  .hero {
+    justify-content: center;
+  }
 
   .hero .hero-div1 img {
     width: 20rem;

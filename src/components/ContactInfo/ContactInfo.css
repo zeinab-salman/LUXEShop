@@ -1,17 +1,19 @@
-.contact-info{
+.contact-info {
 
     display: flex;
     align-items: start;
     justify-content: start;
 }
+
 @media (max-width:1000px) {
-   .contact-info{
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-   } 
-   .contact-info h5{
-    width: 100% !important;
-   }
+    .contact-info {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .contact-info h5 {
+        width: 100% !important;
+    }
 }

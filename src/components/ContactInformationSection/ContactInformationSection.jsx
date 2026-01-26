@@ -6,7 +6,6 @@ import { FaPhone } from "react-icons/fa6";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import React, { useState } from 'react';
-
 import ContactInfo from "../ContactInfo/ContactInfo"
 import CircleIcon from "../CircleIcon/CircleIcon"
 export default function ContactInformationSection() {
@@ -28,7 +27,7 @@ export default function ContactInformationSection() {
         alert(`${formData.username}`);
     };
 
-    
+
     return (
         <>
 
@@ -41,7 +40,7 @@ export default function ContactInformationSection() {
                 />
                 <div className="contact-info2 flex-center">
                     <form className="contact-form" onSubmit={handleSubmit}>
-                         <h3 className="contact-text ">Contact Us</h3>
+                        <h3 className="contact-text ">Contact Us</h3>
                         <FormInput
                             type="text"
                             name="username"
@@ -64,7 +63,7 @@ export default function ContactInformationSection() {
                             onChange={handleChange}
                             value={formData.subject}
                         />
-                        <textarea placeholder="Your Message" id="message-input"></textarea>
+                        <textarea placeholder="Your Message" id="message" className="form-input"></textarea>
 
                         <button type="submit" className=" ">submit</button>
                     </form>
@@ -93,6 +92,7 @@ export default function ContactInformationSection() {
 
                 </div>
             </section>
+
 
         </>
     );

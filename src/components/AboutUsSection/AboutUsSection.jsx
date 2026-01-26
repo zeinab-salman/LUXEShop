@@ -17,7 +17,7 @@ export default function AboutUsSection() {
                     text="Driven a passion the tineless elegance exceptional quality, lwhodsg modern luxury and emt. We believe that tells story, designed your elegant style with of sophistcation."
                     type="sections-description "
                 />
-              
+
                 <div className="flex-center about-us-div">
                     <AboutUsItem
                         title="QUALITY"

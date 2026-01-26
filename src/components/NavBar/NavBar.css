@@ -1,10 +1,10 @@
 .z-navbar {
   width: 100%;
-  height: 70px !important;
+  height: 80px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 8rem;
+  padding: 0px 100px;
   z-index: 1000;
   position: fixed;
   background-color: var(--navbar-color);
@@ -32,14 +32,12 @@
   list-style: none;
   gap: 30px;
   padding: 24px 40px;
-
   border-radius: 12px;
   margin: 0px;
 
 }
 
 .z-navbar .z-links li a {
-
   font-size: 18px;
   text-decoration: none;
   line-height: 27px;
@@ -49,9 +47,6 @@
 }
 
 .z-navbar .z-links li a.active {
-
-
-
   padding: 14px 24px;
   border-radius: 8px;
   font-weight: 500;
@@ -74,18 +69,21 @@
   gap: 30px;
   font-size: 25.5px;
 }
-.cart-icon{
+
+.cart-icon {
 
   color: white !important;
-  font-size: 14px !important;
+  font-size: 18px !important;
 }
+
 .z-navbar .z-button {
   display: none;
 }
 
 
 .z-nav2 {
-  background-color:#121a2ba9  ;
+  background-color: #121a2ba9;
+
 }
 
 .btn-open {
@@ -158,8 +156,8 @@
     left: 0%;
     background-color: var(--logo-color);
     width: 100%;
-   border-top-left-radius: 0%;
-   border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
   }
 
   .btn-open {
@@ -178,12 +176,13 @@
 
 
   .z-nav2 {
-    padding: 10px 4.102564%;
+    padding: 10px 4.102564%
   }
 }
 
 @media (max-width: 390px) {
-  .ma-navbar ul li a {
+  .z-navbar ul li a {
     font-size: 10px;
+
   }
 }

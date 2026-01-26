@@ -7,20 +7,20 @@ export default function FeaturedSection() {
         <>
             <section className="featuredSec flex-center">
                 <Title title="Featured Products"
-                text="Handpicked essentials that define modern luxury. Each piece tells a story of craftsmanship and timeless elegance."
-                line="line-sec"
-                type="sections-description"
+                    text="Handpicked essentials that define modern luxury. Each piece tells a story of craftsmanship and timeless elegance."
+                    line="line-sec"
+                    type="sections-description"
                 />
                 <div className="flex-center featured-products">
                     {
-                        FeaturedData.map((product,id) => (
+                        FeaturedData.map((product, id) => (
                             <ProductCom
                                 key={id}
                                 name={product.name}
                                 price={product.price}
                                 img={product.img}
                                 id={product.id}
-                                
+
                             />
                         ))
 
