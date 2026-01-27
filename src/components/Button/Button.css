@@ -111,6 +111,26 @@
 
     transition: 0.1s;
 }
+.logout-btn{
+    background-color: var(--btn-color);
+    color: white;
+    border-radius: 5%;
+    padding: 10px 10px;
+    border: none;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+.logout-btn:hover{
+
+   background-color: white;
+    color: var(--btn-color);
+
+    transition: 0.1s;
+
+}
 @media(max-width:1000px) {
 
     .hero-btn {

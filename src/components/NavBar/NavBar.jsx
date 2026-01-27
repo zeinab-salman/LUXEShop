@@ -3,7 +3,10 @@ import { FaCartShopping } from "react-icons/fa6";
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaClipboardUser } from "react-icons/fa6";
+import { useAuth } from './AuthProvider';
+import Button from "../../components/Button/Button"
 export default function NavBar() {
+  const {user,logout}=useAuth();
   const [maisopen, setmaisopen] = useState(false)
   const [mascroll, masetScroll] = useState(false);
   const listdown = () => {
@@ -56,15 +59,20 @@ export default function NavBar() {
          <li>
           <NavLink to={'/Collection'} className='z-details' onClick={listdown}>Collections</NavLink>
         </li>
-       
+       {user?(<>
         <li>
           <NavLink to={'/UserCart'} className='z-details cart-icon' onClick={listdown}>< FaCartShopping /></NavLink>
 
         </li>
           <li>
           <NavLink to={'/UserOrders'} className='z-details cart-icon2' onClick={listdown}><  FaClipboardUser/> </NavLink>
+
         </li>
-      
+         <li>
+      <Button   className='z-details cart-icon' onClick={logout} type="logout-btn" text="Logout"></Button>
+
+        </li>
+      </>):(<NavLink to={'/login'}></NavLink>)}
       </ul>
 
     </nav>
