@@ -3,6 +3,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaClipboardUser } from "react-icons/fa6";
+import { FaClipboardCheck } from "react-icons/fa6";
 import { useAuth } from './AuthProvider';
 import Button from "../../components/Button/Button"
 export default function NavBar() {
@@ -65,9 +66,14 @@ export default function NavBar() {
 
         </li>
           <li>
+          <NavLink to={'/CheckoutPage'} className='z-details cart-icon2' onClick={listdown}>< FaClipboardCheck/></NavLink>
+
+        </li>
+          <li>
           <NavLink to={'/UserOrders'} className='z-details cart-icon2' onClick={listdown}><  FaClipboardUser/> </NavLink>
 
         </li>
+       
          <li>
       <Button   className='z-details cart-icon' onClick={logout} type="logout-btn" text="Logout"></Button>
 

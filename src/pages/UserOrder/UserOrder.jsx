@@ -9,7 +9,7 @@ import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SearchInputComponent from "../../components/SearchInputComponent/SearchInputComponent";
 export default function UserOrder() {
-    const { orders, cancelOrder } = useCart();
+    const { orders } = useCart();
     const [searchTerm, setSearchTerm] = useState("");
     const filteredOrders = orders.filter(order =>
         order.id.toString().includes(searchTerm) ||
@@ -37,10 +37,10 @@ export default function UserOrder() {
                             transition={{ duration: 0.6, ease: "easeOut" }}
                             whileInView={{ scale: 1.05 }}
                             className='motion-div-search'
+                            key={order.id}
                         >
                             <div className="order-cart" key={order.id}>
                                 <img src={order.img} />
-                                <MdCancel className="delete-icon" onClick={() => cancelOrder(order.id)} />
                                 <div className="order-id">  <h3>Order #{order.id}</h3> </div>
                                 <div className="total">
                                     <p>Total: ${order.total}</p></div>

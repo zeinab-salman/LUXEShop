@@ -1,13 +1,19 @@
 import "./UserCart.css"
 import React from 'react';
 import { useCart } from './CartProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Title from "../../components/Title/Title"
 import Button from "../../components/Button/Button"
 import { GrClose } from "react-icons/gr";
 export default function UserCart() {
-  const {checkout}= useCart();
+  const {prepareForCheckout}= useCart();
+  const {goToCheckout}=useCart();
+  const navigate =useNavigate();
+  const handleStepOne =()=>{
+    goToCheckout();
+    navigate('/CheckoutPage')
+  }
   const { cartItems, removeFromCart, updateQuantity, totalPrice } = useCart();
   if (cartItems.length === 0) {
     return (
@@ -54,7 +60,7 @@ export default function UserCart() {
           <Button
             text="Proceed to Checkout "
             type="hero-btn"
-            onClick={checkout}
+            onClick={handleStepOne}
           />
         </div>
       </div>

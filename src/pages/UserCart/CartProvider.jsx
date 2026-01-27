@@ -1,10 +1,16 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 const CartContext = createContext();
 export const CartProvider = ({ children }) => {
+  const [pendingCheckout,setPendingCheckout]=useState([]);
+ 
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem('myCart');
     return savedCart ? JSON.parse(savedCart) : [];
+
   });
+  const goToCheckout= () =>{
+    setPendingCheckout([...cartItems]);
+  }
   useEffect(() => {
     localStorage.setItem('myCart', JSON.stringify(cartItems));
   }, [cartItems]);
@@ -29,6 +35,11 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     setCartItems(prev => prev.filter(item => item.id !== id));
   };
+  /////
+   const removeFromCheckout = (id) => {
+    setPendingCheckout(prev => prev.filter(item => item.id !== id));
+  };
+  ///////
   const updateQuantity = (id, amount) => {
     setCartItems(prev => prev.map(item =>
       item.id === id ? { ...item, quantity: Math.max(1, item.quantity + amount) } : item
@@ -36,25 +47,48 @@ export const CartProvider = ({ children }) => {
   };
   const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 const [orders, setOrders] = useState([]);
-const checkout = () => {
+
+///////
+const prepareForCheckout = () => {
   if (cartItems.length > 0) {
-    const newOrder = {
-      id: Date.now(),
-      items: cartItems,
-      total: cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
-      date: new Date().toLocaleDateString()
-    };
-    setOrders([...orders, newOrder]);
-    setCartItems([]); 
+    setPendingCheckout([...cartItems]);
   }
+  
+};
+////////
+
+const confirmFinalOrder = () => {
+    const newOrder = {
+        id: Date.now(),
+        items: pendingCheckout,
+        total: pendingCheckout.reduce((acc, item) => acc + item.price * item.quantity, 0),
+        date: new Date().toLocaleDateString()
+    };
+
+    setOrders([...orders, newOrder]); // إضافة للطلبات النهائية
+    setCartItems([]); // تفريغ السلة الأصلية
+    setPendingCheckout([]); // تفريغ حالة التحقق
 };
 
+
+///////
 const cancelOrder = (orderId) => {
   setOrders(orders.filter(order => order.id !== orderId));
 };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, totalPrice , orders ,checkout , cancelOrder}}>
+    <CartContext.Provider value={{ cartItems,
+     addToCart,
+      removeFromCart,
+      removeFromCheckout,
+      updateQuantity,
+      goToCheckout,
+      pendingCheckout,
+      prepareForCheckout,
+      totalPrice,
+      confirmFinalOrder,
+      orders ,
+      cancelOrder}}>
       {children}
     </CartContext.Provider>
   );
