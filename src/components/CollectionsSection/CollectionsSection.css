@@ -1,0 +1,19 @@
+.products-filter {
+    flex-wrap: wrap;
+    gap: 53px;
+    margin-top: 40px;
+    width: 100%;
+    padding: 70px 0px;
+}
+
+
+@media (max-width:1200px) {
+    .products-filter {
+        flex-wrap: wrap;
+        gap: 60px;
+        padding: 40px 20px;
+      
+        
+    }
+    
+}

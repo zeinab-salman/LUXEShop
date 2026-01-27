@@ -7,10 +7,9 @@ import Title from "../../components/Title/Title"
 import Button from "../../components/Button/Button"
 import { GrClose } from "react-icons/gr";
 export default function UserCart() {
+  const {checkout}= useCart();
   const { cartItems, removeFromCart, updateQuantity, totalPrice } = useCart();
-
   if (cartItems.length === 0) {
-
     return (
       <section className="cart-container empty-cart">
         <h2>Your cart is empty 🛒</h2>
@@ -55,9 +54,8 @@ export default function UserCart() {
           <Button
             text="Proceed to Checkout "
             type="hero-btn"
+            onClick={checkout}
           />
-
-
         </div>
       </div>
     </section>

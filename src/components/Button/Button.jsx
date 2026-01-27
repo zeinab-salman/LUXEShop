@@ -12,6 +12,7 @@ export default function Button({ text, type, onClick }) {
                 whileTap={{ scale: 1.1 }}
                 className=''
             >
+            
                 <button className={` ${type}`} onClick={onClick}>{text}</button>
             </motion.div>
         </>

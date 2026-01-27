@@ -12,6 +12,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import UserCart from "./pages/UserCart/UserCart";
 import Collection from "./pages/Collection/Collection";
+import UserOrder from "./pages/UserOrder/UserOrder";
 import { useState, useEffect } from 'react';
 import { CartProvider } from "./pages/UserCart/CartProvider";
 {
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/UserCart" element={<UserCart />} />
             <Route path="/Collection" element={<Collection />} />
+             <Route path="/UserOrders" element={<UserOrder />} />
           </Routes>
         }
         <Footer />

@@ -1,22 +1,24 @@
 import "./ProductFilter.css"
+import Button from "../../components/Button/Button"
 const ProductFilter = ({ categories, activeCategory, onFilter }) => {
     return (
         <div className="filter-buttons flex-center">
-            <button
+            <Button
+               
                 className={activeCategory === "all" ? "active" : ""}
                 onClick={() => onFilter("all")}
-            >
-                All
-            </button>
+            
+                text="All"
+                type={`collection-btn ${activeCategory === "all" ? "active" : ""} `}
+           />
 
-            {categories.map((cat) => (
-                <button
-                    key={cat}
-                    className={activeCategory === cat ? "active" : ""}
+            {categories.map((cat,index) => (
+                <Button
+                    key={index}
                     onClick={() => onFilter(cat)}
-                >
-                    {cat}
-                </button>
+                    text={cat}
+                    type={`collection-btn ${activeCategory === cat ? "active" : ""} `}
+                />
             ))}
         </div>
     );

@@ -5,17 +5,17 @@ export const ExploreCollectionSectionData = [
 
     {
         img: img1,
-        title: "OuterWear",
+        title: "outerwear",
 
     },
     {
         img: img2,
-        title: "Accessories",
+        title: "accessories",
 
     },
     {
         img: img3,
-        title: "Knitwear",
+        title: "knitwear",
 
     }
 

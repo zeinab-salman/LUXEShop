@@ -35,8 +35,26 @@ export const CartProvider = ({ children }) => {
     ));
   };
   const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+const [orders, setOrders] = useState([]);
+const checkout = () => {
+  if (cartItems.length > 0) {
+    const newOrder = {
+      id: Date.now(),
+      items: cartItems,
+      total: cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
+      date: new Date().toLocaleDateString()
+    };
+    setOrders([...orders, newOrder]);
+    setCartItems([]); 
+  }
+};
+
+const cancelOrder = (orderId) => {
+  setOrders(orders.filter(order => order.id !== orderId));
+};
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, totalPrice }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, totalPrice , orders ,checkout , cancelOrder}}>
       {children}
     </CartContext.Provider>
   );

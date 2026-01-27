@@ -2,16 +2,13 @@ import './NavBar.css'
 import { FaCartShopping } from "react-icons/fa6";
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-
+import { FaClipboardUser } from "react-icons/fa6";
 export default function NavBar() {
   const [maisopen, setmaisopen] = useState(false)
   const [mascroll, masetScroll] = useState(false);
-
   const listdown = () => {
     setmaisopen(!maisopen);
   };
-
-
   useEffect(() => {
     const mahandleScroll = () => {
       if (window.scrollY > 50) {
@@ -22,8 +19,6 @@ export default function NavBar() {
     };
 
     window.addEventListener('scroll', mahandleScroll);
-
-
     return () => {
       window.removeEventListener('scroll', mahandleScroll);
     };
@@ -61,9 +56,15 @@ export default function NavBar() {
          <li>
           <NavLink to={'/Collection'} className='z-details' onClick={listdown}>Collections</NavLink>
         </li>
+       
         <li>
           <NavLink to={'/UserCart'} className='z-details cart-icon' onClick={listdown}>< FaCartShopping /></NavLink>
+
         </li>
+          <li>
+          <NavLink to={'/UserOrders'} className='z-details cart-icon2' onClick={listdown}><  FaClipboardUser/> </NavLink>
+        </li>
+      
       </ul>
 
     </nav>

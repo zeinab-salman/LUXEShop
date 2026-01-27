@@ -18,10 +18,10 @@ export default function CollectionHero() {
         >
           <div className="flex-center hero-div1">
             <Title title="Our"
-              span="Collections"
+              span=" Collections"
               text=""
             />
-            <TypeWriterText text=" More than a brand, we are a curated experience for those who appreciate the finer things in life. Welcome to our world. " type="text1" />
+            <TypeWriterText text=" Discover Timeless pieces , Explore Our Collections, Collections for you, Elevate your everyday style." type="text1" />
           </div>
         </motion.div>
         <Link to={'/Products'} className="btn-hero"><Button text="Products" type="hero-btn" /></Link>

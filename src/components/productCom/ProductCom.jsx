@@ -13,16 +13,16 @@ export default function ProductCom({ id, img, name, price }) {
                 className='motion-div'
             >
                 <Link to={`/Products/${id}`} className="Link">
-                    <div className="product-item"  >
+                    <div className="product-item"   >
                         <div className="img-div">
                             <img src={img} alt="photo" />
                         </div>
                         <div className="content-div">
                             <h3>{name}</h3>
                             <p>${price}</p>
-                            <Link to={`/Products/${id}`}  >
+                            
                                 <Button text="Details" type="product-item-btn" />
-                            </Link>
+                            
                         </div>
                     </div>
                 </Link>
