@@ -7,8 +7,10 @@ import { MdCancel } from "react-icons/md";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
+
 import SearchInputComponent from "../../components/SearchInputComponent/SearchInputComponent";
 export default function UserOrder() {
+      
     const { orders } = useCart();
     const [searchTerm, setSearchTerm] = useState("");
     const filteredOrders = orders.filter(order =>

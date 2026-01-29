@@ -8,8 +8,9 @@ import Title from "../../components/Title/Title"
 import Button from "../../components/Button/Button"
 import FormInput from "../../components/FormInput/FormInput";
 import { GrClose } from "react-icons/gr";
-
+import { WalletProvider,useWallet } from "../../components/WalletModel/WalletProvider";
 export default function CheckoutPage() {
+  const { wallet, topUp,rewardOrder } = useWallet();
   const { pendingCheckout } = useCart();
 
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ export default function CheckoutPage() {
     const isFormComplete= formData && Object.values(formData).every(value=> value.trim() !=="");
     if (!isFormComplete){alert("please fill form"); return;}
     confirmFinalOrder();
+    rewardOrder();
     navigate('/UserOrders');
   }
   const [formData, setFormData] = useState({

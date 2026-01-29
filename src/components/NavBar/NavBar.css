@@ -17,6 +17,7 @@
 
 #nav-right {
   color: var(--logo-color);
+  
 }
 
 .z-navbar .z-links li a.active {
@@ -75,12 +76,13 @@
   color: white !important;
   font-size: 18px !important;
 }
-.cart-icon2{
 
-    color: white !important;
+.cart-icon2 {
+
+  color: white !important;
   font-size: 18px !important;
-  
- 
+
+
 
 }
 
@@ -107,7 +109,33 @@
   background-color: var(--logo-color);
 }
 
+.user-list {
+  margin-top: 470px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--navbar-color);
+  padding: 10px;
+  border-radius: 2px;
+  gap: 20px;
+  position: absolute;
+  right: 170px;
+
+}
+
+.list-none {
+  display: none;
+}
+
 @media (max-width: 1440px) {
+ .user-list{
+  width: 50%;
+  margin-top: 630px;
+ }
+
   .z-navbar .z-links {
     padding: 20px 30px;
     gap: 16px;
@@ -185,6 +213,7 @@
 
   .z-nav2 {
     padding: 10px 4.102564%
+
   }
 }
 

@@ -16,6 +16,7 @@ import UserOrder from "./pages/UserOrder/UserOrder";
 import CheckoutPage from "./pages/CheckoutPage/Checkoutpage";
 import { useState, useEffect } from 'react';
 import { CartProvider } from "./pages/UserCart/CartProvider";
+
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -29,6 +30,8 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
+
+   
   return (
     <>
       <CartProvider>
@@ -46,6 +49,7 @@ export default function App() {
              <Route path="/CheckoutPage" element={<CheckoutPage />} />
             <Route path="/Collection" element={<Collection />} />
              <Route path="/UserOrders" element={<UserOrder />} />
+             
           </Routes>
         }
         <Footer />
