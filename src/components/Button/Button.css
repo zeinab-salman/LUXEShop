@@ -1,5 +1,5 @@
 .hero-btn {
-    background-color: var(--btn-color);
+    background: linear-gradient(to right, var(--btn-color), #0444a9);
     color: white;
     border-radius: 5%;
     padding: 10px 40px;
@@ -12,8 +12,7 @@
 
 .hero-btn:hover {
     background-color: white;
-    color: var(--btn-color);
-
+    padding: 12px 42px;
     transition: 0.1s;
 }
 
@@ -70,7 +69,8 @@
     color: white;
     border: 2px solid white;
 }
-.collection-btn{
+
+.collection-btn {
     background-color: var(--bg-color);
     color: var(--navbar-color);
     border-radius: 100rem;
@@ -81,23 +81,26 @@
     margin-bottom: 50px;
 
 }
-.collection-btn:hover{
 
-    background-color:var(--navbar-color);
+.collection-btn:hover {
+
+    background-color: var(--navbar-color);
     color: white;
 
     transition: 0.1s;
 
 
 }
-.active{
-     background-color:var(--navbar-color);
+
+.active {
+    background-color: var(--navbar-color);
     color: white;
 }
-.delete-btn{
+
+.delete-btn {
     background-color: red;
     color: white;
-   
+
     border-radius: 5%;
     padding: 10px 20px;
     border: none;
@@ -105,13 +108,15 @@
     margin-top: 30px;
     margin-bottom: 50px;
 }
+
 .delete-btn:hover {
     background-color: white;
     color: red;
 
     transition: 0.1s;
 }
-.logout-btn{
+
+.logout-btn {
     background-color: var(--btn-color);
     color: white;
     border-radius: 5%;
@@ -123,14 +128,16 @@
     margin-top: 50px;
 
 }
-.logout-btn:hover{
 
-   background-color: white;
+.logout-btn:hover {
+
+    background-color: white;
     color: var(--btn-color);
 
     transition: 0.1s;
 
 }
+
 @media(max-width:1000px) {
 
     .hero-btn {

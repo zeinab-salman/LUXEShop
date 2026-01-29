@@ -17,7 +17,7 @@
 
 #nav-right {
   color: var(--logo-color);
-  
+
 }
 
 .z-navbar .z-links li a.active {
@@ -71,18 +71,21 @@
   font-size: 25.5px;
 }
 
-.cart-icon {
 
-  color: white !important;
-  font-size: 18px !important;
-}
 
 .cart-icon2 {
 
-  color: white !important;
-  font-size: 18px !important;
+  color: var(--navbar-color) !important;
+  font-size: 25px !important;
+  cursor: pointer;
 
 
+
+}
+.cart-icon22{
+   color: white!important;
+  font-size: 25px !important;
+  cursor: pointer;
 
 }
 
@@ -110,10 +113,10 @@
 }
 
 .user-list {
-  margin-top: 470px;
+  margin-top: 270px;
   list-style: none;
   display: flex;
-  flex-direction: column;
+ 
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -126,15 +129,17 @@
 
 }
 
+.user-list li a.active {
+background-color: rgba(255, 255, 255, 0.01) !important;
+padding: 0px !important;
+font-size: 35px !important;
+}
 .list-none {
-  display: none;
+ display:none;
 }
 
 @media (max-width: 1440px) {
- .user-list{
-  width: 50%;
-  margin-top: 630px;
- }
+ 
 
   .z-navbar .z-links {
     padding: 20px 30px;
@@ -173,6 +178,13 @@
 }
 
 @media (max-width: 950px) {
+   .user-list {
+    width: 20%;
+    margin-top: 0px;
+    right: 0px;
+    top: 10px;
+   
+  }
   .z-navbar {
     height: 102px;
     padding: 40px 4.102564% 14px 4.102564%;
@@ -213,7 +225,6 @@
 
   .z-nav2 {
     padding: 10px 4.102564%
-
   }
 }
 

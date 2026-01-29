@@ -12,13 +12,14 @@ import { GiWallet } from "react-icons/gi";
 import ProfileModel from "../../components/ProfileModel/ProfileModel";
 import WalletModel from "../../components/WalletModel/WalletModel"
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 export default function NavBar() {
-   const navigate = useNavigate();
-  const [profileOpen,setProfileOpen]=useState(false);
- const [walletOpen,setWalletOpen]=useState(false);
-  const {user,logout}=useAuth();
+  const navigate = useNavigate();
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [walletOpen, setWalletOpen] = useState(false);
+  const { user, logout } = useAuth();
   const [maisopen, setmaisopen] = useState(false)
-    const [listOpen, setListOpen] = useState(false)
+  const [listOpen, setListOpen] = useState(false)
   const [mascroll, masetScroll] = useState(false);
   const listdown = () => {
     setmaisopen(!maisopen);
@@ -43,18 +44,35 @@ export default function NavBar() {
   }, []);
 
   return (
-    <>
-    <nav className={`z-navbar ${mascroll ? 'z-nav2' : ''}`}>
-      <div className='logo'>
-        <h1>LUXE<span id='nav-right'>SHOP</span> </h1>
+    <><nav className={` nav-3d z-navbar   ${mascroll ? 'z-nav2 ' : ''}`} >
 
+
+      <div className='logo'>
+        <motion.h1
+          animate={{
+            scale: [1, 1.1, 1],
+            textShadow: [
+              "0px 0px 0px rgba(0,112,243,0)",
+              "0px 0px 20px rgba(0,112,243,0.5)",
+              "0px 0px 0px rgba(0,112,243,0)"
+            ]
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+        >
+          LUXE<span id='nav-right'>SHOP</span>
+        </motion.h1>
       </div>
       <div className="btn-open" onClick={listdown}>
         <div className='line'> </div>
         <div className='line'> </div>
         <div className='line'></div>
       </div>
-      <ul className={`z-links ${maisopen ? 'z-link-open' : ''}`}>
+      <ul className={`z-links ${maisopen ? 'z-link-open' : ''}`} >
         <li>
           <NavLink to={'/'} className='z-home' onClick={listdown}>Home</NavLink>
         </li>
@@ -72,52 +90,60 @@ export default function NavBar() {
         <li>
           <NavLink to={'/Contact'} className='z-details' onClick={listdown}>Contact</NavLink>
         </li>
-         <li>
+        <li>
           <NavLink to={'/Collection'} className='z-details' onClick={listdown}>Collections</NavLink>
         </li>
-        <li>< FaListUl  className='z-details cart-icon2' onClick={list}/>  </li>
-       {user?(<>
-       <ul className={`user-list ${listOpen ? 'list-none' : ''}`}>
-        <li>
-          <NavLink to={'/UserCart'} className='z-details cart-icon' onClick={listdown}>< FaCartShopping /></NavLink>
-
-        </li>
-          <li>
-          <NavLink to={'/CheckoutPage'} className='z-details cart-icon2' onClick={listdown}>< FaClipboardCheck/></NavLink>
-
-        </li>
-          <li>
-          <NavLink to={'/UserOrders'} className='z-details cart-icon2' onClick={listdown}><  FaClipboardUser/> </NavLink>
-
-        </li>
-        <li>
-          
-       <FaUserCircle onClick={()=>setProfileOpen(true)} className='z-details cart-icon2'/>
-   
-
-        </li>
-        <li>
-          <GiWallet onClick={()=>setWalletOpen(true)} className='z-details cart-icon2'/>
-        </li>
-         <li>
-      <Button   className='z-details cart-icon' onClick={logout} type="logout-btn" text="Logout"></Button>
-
-        </li></ul>
-      </>):(
-        navigate('/Login'))}
-        //<NavLink to={'/login'}></NavLink>
       
+        {user ? (<>
+         < FaListUl className='z-details cart-icon22' onClick={list} /> 
+          <ul className={` user-list glass-effect ${listOpen ? 'list-none' : ''}`}>
+
+            <li>
+              <NavLink to={'/UserCart'} className='z-details cart-icon2' onClick={listdown}>< FaCartShopping /></NavLink>
+
+            </li>
+            <li>
+              <NavLink to={'/CheckoutPage'} className='z-details cart-icon2' onClick={listdown}>< FaClipboardCheck /></NavLink>
+
+            </li>
+            <li>
+              <NavLink to={'/UserOrders'} className='z-details cart-icon2' onClick={listdown}><  FaClipboardUser /> </NavLink>
+
+            </li>
+            <li>
+
+              <FaUserCircle onClick={() => setProfileOpen(true)} className='z-details cart-icon2' />
+
+
+            </li>
+            <li>
+              <GiWallet onClick={() => setWalletOpen(true)} className='z-details cart-icon2' />
+            </li>
+            <li>
+              <Button className='z-details cart-icon' onClick={logout} type="logout-btn" text="Logout"></Button>
+
+            </li></ul>
+        </>) : (
+          <h2></h2>)}
+
+
       </ul>
 
     </nav>
-    <ProfileModel
-    isOpen={profileOpen}
-    onClose={() => setProfileOpen(false)}
-    />
-     <WalletModel
-    isOpen={walletOpen}
-    onClose={() => setWalletOpen(false)}
-    />
+      <ProfileModel
+        isOpen={profileOpen}
+        onClose={() => setProfileOpen(false)}
+      />
+      <WalletModel
+        isOpen={walletOpen}
+        onClose={() => setWalletOpen(false)}
+      />
     </>
+
   )
 }
+
+
+
+
+

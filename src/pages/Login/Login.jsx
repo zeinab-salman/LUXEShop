@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import FormInput from "../../components/FormInput/FormInput";
 import { useAuth } from "../../components/NavBar/AuthProvider";
 import { motion } from "framer-motion";
-
+import { toast } from "react-hot-toast";
 export default function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -15,17 +15,25 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-   
+
     const users = JSON.parse(localStorage.getItem("users")) || [];
     console.log("Users in LocalStorage:", users);
 
-  
+
     const user = users.find(
       u => u.email === email.trim() && u.password === password.trim()
     );
 
     if (!user) {
-      alert("There is no account");
+      toast.error("There is no account", {
+        duration: 4000,
+        position: 'top-center',
+        removeDelay: 1000,
+        toasterId: 'default',
+        className: 'toaster',
+
+
+      });
       return;
     }
 
@@ -34,13 +42,15 @@ export default function Login() {
   };
 
   return (
+
     <section className="login-sec flex-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className="motion-form"
       >
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form  " onSubmit={handleSubmit}>
           <h2>Login</h2>
 
           <FormInput

@@ -11,7 +11,7 @@ const FormInput = ({ label, type = "text", name, value, onChange, placeholder, r
                 onChange={onChange}
                 placeholder={placeholder}
                 required={required}
-                className="form-input"
+                className="form-input "
                 autoComplete="off"
             />
         </div>

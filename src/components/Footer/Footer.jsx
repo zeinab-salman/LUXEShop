@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 import "./Footer.css"
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <>
@@ -14,7 +15,25 @@ export default function Footer() {
           <p id="join-text"> Join the LuxeShop Family </p>
         </div>
         <div className=" footer-develop">
-          <p id="develop-text">Developed By <a href="https://algo-code.com">AlgoCode</a></p>
+          <motion.p
+            animate={{
+              scale: [1, 1.1, 1], // يكبر بنسبة 10% ثم يعود لحجمه
+              textShadow: [
+                "0px 0px 0px rgba(0,112,243,0)",
+                "0px 0px 20px rgba(0,112,243,0.5) ",
+                "0px 0px 0px rgba(0,112,243,0)"
+              ]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            id="develop-text"
+          >
+
+            Developed By<a href="https://algo-code.com"> AlgoCode</a>
+          </motion.p>
           <Link to="/Register">
             <Button
               text="Register"

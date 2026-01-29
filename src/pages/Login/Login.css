@@ -7,18 +7,22 @@
     border: 2px solid var(--logo-color);
     width: 45rem;
     border-radius: 5%;
-    background-color: #121a2bea;
+    background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
     box-shadow: 1px 1px 20px 0px white;
 }
 
 .login-sec {
-    padding: 100px 70px ;
+    padding: 100px 70px;
     padding-top: 150px;
     background-color: var(--bg-color);
     height: 120vh;
-
+    width: 100%;
 }
-
+.motion-form{width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .form P {
     color: white;
 }
@@ -42,7 +46,8 @@
     .form {
         width: 100% !important;
     }
-    .login-sec{
-        padding: 100px 10px;
+
+    .login-sec {
+        padding: 100px 10px !important;
     }
 }

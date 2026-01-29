@@ -1,9 +1,8 @@
 .wallet-container {
-
    width: 100%;
     flex-direction: column;
     padding: 240px 100px;
-    background-color: rgba(9, 9, 30, 0.495);
+  
     position: fixed;
     z-index: 1000;
     height: 100%;
@@ -23,7 +22,7 @@
     border-radius: 5%;
     background-color: var(--navbar-color);
     box-shadow: 1px 1px 20px 0px white;
-    
+     background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
 
 }
 @media(max-width:1000px) {

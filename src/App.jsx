@@ -16,6 +16,7 @@ import UserOrder from "./pages/UserOrder/UserOrder";
 import CheckoutPage from "./pages/CheckoutPage/Checkoutpage";
 import { useState, useEffect } from 'react';
 import { CartProvider } from "./pages/UserCart/CartProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 {
   /* The following line can be included in your src/index.js or App.js file */
@@ -34,6 +35,7 @@ export default function App() {
    
   return (
     <>
+    <Toaster/>
       <CartProvider>
         <NavBar />
         {loading ? <Loading /> :

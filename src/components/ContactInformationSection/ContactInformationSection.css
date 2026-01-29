@@ -14,7 +14,7 @@
     border: 2px solid var(--logo-color);
     width: 42rem;
     border-radius: 5%;
-    background-color: #121a2bea;
+    background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
     box-shadow: 1px 1px 20px 0px white;
 }
 

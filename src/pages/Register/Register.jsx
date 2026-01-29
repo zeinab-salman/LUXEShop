@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormInput from '../../components/FormInput/FormInput';
 import { motion } from 'framer-motion';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -18,7 +19,14 @@ export default function Register() {
     e.preventDefault();
 
     if (form.password !== form.confirmPassword) {
-      alert("Passwords do not match");
+      toast.error("Passwords do not match", {
+
+        duration: 4000,
+        position: 'top-center',
+        removeDelay: 1000,
+        toasterId: 'default',
+        className: 'toaster',
+      });
       return;
     }
 
@@ -26,7 +34,14 @@ export default function Register() {
 
     const exists = users.some(u => u.email === form.email);
     if (exists) {
-      alert("This account is already created");
+      toast.error("This account is already created", {
+        duration: 4000,
+        position: 'top-center',
+        removeDelay: 1000,
+        toasterId: 'default',
+        className: 'toaster',
+
+      });
       return;
     }
 
@@ -42,7 +57,14 @@ export default function Register() {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Account created successfully");
+    toast.success("Account created successfully", {
+      duration: 4000,
+      position: 'top-center',
+      removeDelay: 1000,
+      toasterId: 'default',
+      className: 'toaster',
+
+    });
     navigate("/login");
   };
 
@@ -52,6 +74,7 @@ export default function Register() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className='motion-form'
       >
         <form className='register-form' onSubmit={handleSubmit}>
           <h2>Register</h2>
