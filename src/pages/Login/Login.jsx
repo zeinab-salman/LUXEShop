@@ -36,7 +36,7 @@ export default function Login() {
     }
 
     login("dummy-token", user);
-    navigate("/VerificationCode");
+    navigate("/");
   };
 
   return (
