@@ -9,23 +9,34 @@
   position: fixed;
   background-color: var(--navbar-color);
 }
+#logo-link{
+text-decoration: none;
+color: white;
+}
+
+#nav-right {
+  color: var(--logo-color) !important;
+
+}
 
 .z-navbar .logo h1 {
   color: white;
   font-size: 2.6rem;
 }
-
-#nav-right {
-  color: var(--logo-color);
-
+.z-navbar .z-links  a{
+  cursor: pointer !important;
 }
 
-.z-navbar .z-links li a.active {
+.z-navbar .z-links  .li-nav1 a.active {
   padding: 10px 5px;
-  background-color: var(--logo-color);
+  color: white;
+  background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
+}
+.z-navbar .z-links  .li-nav2 a.active {
+ padding: 10px 5px;
+  background: none;
   color: white;
 }
-
 .z-navbar .z-links {
   display: flex;
   align-items: center;
@@ -75,7 +86,7 @@
 
 .cart-icon2 {
 
-  color: var(--navbar-color) !important;
+  color:var(--navbar-color) !important;
   font-size: 25px !important;
   cursor: pointer;
 

@@ -38,13 +38,12 @@ export default function WalletModel({ isOpen, onClose }) {
                             className="wallet-div-3d"
                             onClick={(e) => e.stopPropagation()}
 
-                            // أنيميشن الفتح ثلاثي الأبعاد
+                          
                             initial={{
                                 opacity: 0,
-                                rotateY: -45,  // يبدأ مائلاً لليسار
-                                rotateX: 10,   // ميلان بسيط للأمام
-                                z: -500        // يبدأ بعيداً في العمق
-                            }}
+                                rotateY: -45, 
+                                rotateX: 10,   
+                                z: -500   }}
                             animate={{
                                 opacity: 1,
                                 rotateY: 0,

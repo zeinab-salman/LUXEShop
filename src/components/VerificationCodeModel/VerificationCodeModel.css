@@ -1,0 +1,22 @@
+.verification-section{
+padding: 100px 100px;
+width: 100%;
+height: 100vh;
+flex-direction: column;
+background-color: var(--bg-color);
+}
+.verification-section form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.verification-section button{
+    width:100% !important;
+   
+}
+.inputs input{
+    padding: 50px 10px;
+    border-radius: 2rem;
+}

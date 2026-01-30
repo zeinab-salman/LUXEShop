@@ -11,7 +11,7 @@ export default function UserCart() {
   const navigate = useNavigate();
 
   const handleStepOne = () => {
-    if (!cartItems.length) return; // تمنع الانتقال إذا السلة فارغة
+    if (!cartItems.length) return; 
     prepareForCheckout();
     navigate('/CheckoutPage');
   };

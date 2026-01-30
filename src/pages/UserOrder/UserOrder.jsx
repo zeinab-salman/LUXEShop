@@ -28,7 +28,7 @@ export default function UserOrder() {
                 setSearchTerm={setSearchTerm}
 
             />
-            <div className="orders-carts flex-center">
+            <div className="orders-carts flex-center empty-orders">
                 {filteredOrders.length === 0 ? (
                     <p className="not-found-text">No orders found.</p>
                 ) : (

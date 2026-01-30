@@ -13,6 +13,7 @@ import Contact from "./pages/Contact/Contact";
 import UserCart from "./pages/UserCart/UserCart";
 import Collection from "./pages/Collection/Collection";
 import UserOrder from "./pages/UserOrder/UserOrder";
+import VerificationCodeModel from "./components/VerificationCodeModel/VerificationCodeModel";
 import CheckoutPage from "./pages/CheckoutPage/Checkoutpage";
 import { useState, useEffect } from 'react';
 import { CartProvider } from "./pages/UserCart/CartProvider";
@@ -31,8 +32,6 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-
-   
   return (
     <>
     <Toaster/>
@@ -51,7 +50,7 @@ export default function App() {
              <Route path="/CheckoutPage" element={<CheckoutPage />} />
             <Route path="/Collection" element={<Collection />} />
              <Route path="/UserOrders" element={<UserOrder />} />
-             
+              <Route path="/VerificationCode" element={<VerificationCodeModel />} />
           </Routes>
         }
         <Footer />

@@ -11,7 +11,9 @@ import CircleIcon from "../CircleIcon/CircleIcon"
 export default function ContactInformationSection() {
     const [formData, setFormData] = useState({
         username: '',
-        email: ''
+        email: '',
+        subject: '',
+        message: '',
     });
     const handleChange = (e) => {
         const { name, value } =
@@ -22,9 +24,20 @@ export default function ContactInformationSection() {
         });
     };
     const handleSubmit = (event) => {
+         const subjects = JSON.parse(localStorage.getItem("subjects")) || [];
         event.preventDefault();
         console.log("done", formData);
         alert(`${formData.username}`);
+        const newSubject = {
+            id: Date.now(),
+            name: formData.name,
+            email: formData.email.trim(),
+            subject: formData.subject,
+            message: formData.message,
+        };
+
+        subjects.push(newSubject);
+        localStorage.setItem("subjects", JSON.stringify(subjects));
     };
 
 
@@ -63,7 +76,8 @@ export default function ContactInformationSection() {
                             onChange={handleChange}
                             value={formData.subject}
                         />
-                        <textarea placeholder="Your Message" id="message" className="form-input"></textarea>
+                        <textarea placeholder="Your Message" name="message" id="message" className="form-input" onChange={handleChange}
+                            value={formData.message} ></textarea>
 
                         <button type="submit" className=" ">submit</button>
                     </form>

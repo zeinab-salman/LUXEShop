@@ -1,134 +1,169 @@
-import "./CheckoutPage.css"
-import React from 'react';
-import { useState } from "react";
-import { useCart } from '../UserCart/CartProvider';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import "./CheckoutPage.css";
+import React, { useState } from "react";
+import { useCart } from "../UserCart/CartProvider";
+import { Link, useNavigate } from "react-router-dom";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Title from "../../components/Title/Title"
-import Button from "../../components/Button/Button"
+import Title from "../../components/Title/Title";
+import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
-import { GrClose } from "react-icons/gr";
-import { WalletProvider,useWallet } from "../../components/WalletModel/WalletProvider";
-export default function CheckoutPage() {
-  const { wallet, topUp,rewardOrder } = useWallet();
-  const { pendingCheckout } = useCart();
+import toast from "react-hot-toast";
+import { useWallet } from "../../components/WalletModel/WalletProvider";
 
+export default function CheckoutPage() {
   const navigate = useNavigate();
-  const handleFinalClick = (e) => {
+  const { rewardOrder } = useWallet();
+
+  const {
+    pendingCheckout,
+    totalPrice,
+    removeFromCheckout,
+    confirmFinalOrder,
+  } = useCart();
+
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    address: "",
+    city: "",
+    ZIPCode: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const isFormComplete= formData && Object.values(formData).every(value=> value.trim() !=="");
-    if (!isFormComplete){alert("please fill form"); return;}
+
+    const isFormComplete = Object.values(formData).every(
+      (value) => value.trim() !== ""
+    );
+
+    if (!isFormComplete) {
+      toast.error("Please fill all fields",{
+        duration: 4000,
+        position: 'top-center',
+        removeDelay: 1000,
+        toasterId: 'default',
+        className: 'toaster',
+      });
+      return;
+    }
+
+    const orderInfo = JSON.parse(localStorage.getItem("orderInfo")) || [];
+
+    const newOrderInfo = {
+      id: Date.now(),
+      username: formData.username,
+      email: formData.email.trim(),
+      address: formData.address,
+      city: formData.city,
+      ZIPCode: formData.ZIPCode,
+    };
+
+    orderInfo.push(newOrderInfo);
+    localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
+
     confirmFinalOrder();
     rewardOrder();
-    navigate('/UserOrders');
-  }
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    address: '',
-    city: '',
-    ZIPCode: ''
-  });
-  const handleChange = (e) => {
-    const { name, value } =
-      e.target;
-    setFormData({
-      ...formData,
-      [name]: value
+
+    toast.success("Order placed successfully!",{
+        duration: 4000,
+        position: 'top-center',
+        removeDelay: 1000,
+        toasterId: 'default',
+        className: 'toaster',
+
     });
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("done", formData);
-    alert(`${formData.username}`);
-    if (!formData.email || !formData.username || !formData.address || !formData.city || !formData.ZIPCode) {
-      alert("please fill all fields")
-
-    }
+    navigate("/UserOrders");
   };
 
-
-  const { confirmFinalOrder } = useCart();
-  const { cartItems, totalPrice ,removeFromCheckout } = useCart();
   if (pendingCheckout.length === 0) {
     return (
       <section className="cart-container empty-cart">
         <h2 className="no-list-text">Your Checkout list is empty 🛒</h2>
-        <Link to="/"><Button text="Go Back to Shopping" type="hero-btn" /></Link>
+        <Link to="/">
+          <Button text="Go Back to Shopping" type="hero-btn" />
+        </Link>
       </section>
     );
   }
 
   return (
-    <section className="cart-container-check " >
-      <Title
-        title="Check Out"
-        line="line"
-      />
-      <div className=" cart-info2">
+    <section className="cart-container-check">
+      <Title title="Check Out" line="line" />
+
+      <div className="cart-info2">
         <form className="check-form" onSubmit={handleSubmit}>
-          <h3 className="contact-text ">Shipping Information</h3>
+          <h3 className="contact-text">Shipping Information</h3>
           <FormInput
             type="text"
             name="username"
             placeholder="Full Name"
-            onChange={handleChange}
             value={formData.username}
-
+            onChange={handleChange}
           />
+
           <FormInput
             type="email"
             name="email"
             placeholder="Email"
-            onChange={handleChange}
             value={formData.email}
+            onChange={handleChange}
           />
+
           <FormInput
             type="text"
             name="address"
             placeholder="Address"
-            onChange={handleChange}
             value={formData.address}
-
+            onChange={handleChange}
           />
+
           <FormInput
             type="text"
             name="city"
             placeholder="City Country"
-            onChange={handleChange}
             value={formData.city}
-
+            onChange={handleChange}
           />
+
           <FormInput
             type="text"
             name="ZIPCode"
             placeholder="ZIP Code"
-            onChange={handleChange}
             value={formData.ZIPCode}
+            onChange={handleChange}
           />
-          <div className="flex-center btns-check ">
-            <Button
-              text="Continue to payment "
-              type="hero-btn"
-              onClick={handleFinalClick}
-            />
-          
 
+          <div className="flex-center btns-check">
+            <Button text="Continue to payment" type="hero-btn" />
           </div>
         </form>
 
-        <div className=" details-cart-check">
+        {/* ORDER SUMMARY */}
+        <div className="details-cart-check">
           <h2>Order Summary</h2>
           <h4>Total: ${totalPrice.toFixed(2)}</h4>
+
           <div className="cart-items">
             {pendingCheckout.map((item) => (
-              <div key={item.id} className="product-cart-check" >
+              <div key={item.id} className="product-cart-check">
                 <img src={item.img} alt={item.name} />
+
                 <div className="cart-right-check">
                   <h3>{item.name}</h3>
                   <p>Price: ${item.price}</p>
                 </div>
-                <button onClick={() => removeFromCheckout(item.id)} className="remove-btn">
+
+                <button
+                  className="remove-btn"
+                  onClick={() => removeFromCheckout(item.id)}
+                >
                   <RiDeleteBin6Line />
                 </button>
               </div>
@@ -138,8 +173,7 @@ export default function CheckoutPage() {
       </div>
     </section>
   );
-};
-
+}
 
 
 

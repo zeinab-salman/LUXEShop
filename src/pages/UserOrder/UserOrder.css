@@ -1,10 +1,15 @@
 .orders-section {
     width: 100%;
     flex-direction: column;
-    padding: 240px 100px;
+    padding: 100px 100px;
+   
     background-color: var(--bg-color);
 }
-
+.empty-orders{
+    height: 100vh;
+    text-align: center;
+     padding-bottom: 240px;
+}
 .order-cart {
     color: white !important;
     background-color: var(--navbar-color);
@@ -16,7 +21,6 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-
     color: var(--navbar-color);
     padding: 20px;
     position: relative;

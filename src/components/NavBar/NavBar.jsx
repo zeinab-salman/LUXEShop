@@ -64,7 +64,7 @@ export default function NavBar() {
           }}
 
         >
-          LUXE<span id='nav-right'>SHOP</span>
+         <a href='/' id='logo-link'> LUXE<span id='nav-right'>SHOP</span></a>
         </motion.h1>
       </div>
       <div className="btn-open" onClick={listdown}>
@@ -73,24 +73,24 @@ export default function NavBar() {
         <div className='line'></div>
       </div>
       <ul className={`z-links ${maisopen ? 'z-link-open' : ''}`} >
-        <li>
+        <li className='li-nav1'>
           <NavLink to={'/'} className='z-home' onClick={listdown}>Home</NavLink>
         </li>
-        <li>
+        <li  className='li-nav1' >
           <NavLink to={'/Login'} onClick={listdown}>Login</NavLink>
         </li>
 
-        <li>
+        <li  className='li-nav1' >
           <NavLink to={'/Products'} className='z-details' onClick={listdown}>Products</NavLink>
         </li>
-        <li>
+        <li  className='li-nav1'>
           <NavLink to={'/About'} className='z-details' onClick={listdown}>About</NavLink>
 
         </li>
-        <li>
+        <li  className='li-nav1' >
           <NavLink to={'/Contact'} className='z-details' onClick={listdown}>Contact</NavLink>
         </li>
-        <li>
+        <li  className='li-nav1' >
           <NavLink to={'/Collection'} className='z-details' onClick={listdown}>Collections</NavLink>
         </li>
       
@@ -98,25 +98,25 @@ export default function NavBar() {
          < FaListUl className='z-details cart-icon22' onClick={list} /> 
           <ul className={` user-list glass-effect ${listOpen ? 'list-none' : ''}`}>
 
-            <li>
+            <li className='li-nav2'>
               <NavLink to={'/UserCart'} className='z-details cart-icon2' onClick={listdown}>< FaCartShopping /></NavLink>
 
             </li>
-            <li>
+            <li  className='li-nav2' >
               <NavLink to={'/CheckoutPage'} className='z-details cart-icon2' onClick={listdown}>< FaClipboardCheck /></NavLink>
 
             </li>
-            <li>
+            <li  className='li-nav2' >
               <NavLink to={'/UserOrders'} className='z-details cart-icon2' onClick={listdown}><  FaClipboardUser /> </NavLink>
 
             </li>
-            <li>
+            <li  className='li-nav2' >
 
               <FaUserCircle onClick={() => setProfileOpen(true)} className='z-details cart-icon2' />
 
 
             </li>
-            <li>
+            <li   className='li-nav2'>
               <GiWallet onClick={() => setWalletOpen(true)} className='z-details cart-icon2' />
             </li>
             <li>

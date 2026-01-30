@@ -31,14 +31,12 @@ export default function Login() {
         removeDelay: 1000,
         toasterId: 'default',
         className: 'toaster',
-
-
       });
       return;
     }
 
     login("dummy-token", user);
-    navigate("/");
+    navigate("/VerificationCode");
   };
 
   return (

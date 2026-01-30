@@ -17,7 +17,7 @@
 }
 
 .details-btn {
-    background-color: var(--btn-color);
+     background: linear-gradient(to right, var(--btn-color), #0444a9);
     color: white;
     border-radius: 5%;
     padding: 15px 146px;
@@ -36,7 +36,7 @@
 }
 
 .product-item-btn {
-    background-color: var(--btn-color);
+     background: linear-gradient(to right, var(--btn-color), #0444a9);
     color: white;
     border-radius: 5%;
     padding: 10px 20px;
@@ -47,8 +47,8 @@
 }
 
 .product-item-btn:hover {
-    background-color: white;
-    color: var(--btn-color);
+    background: white;
+   color: var(--btn-color);
     border: 2px solid var(--btn-color);
     transition: 0.5s;
 }
@@ -93,7 +93,7 @@
 }
 
 .active {
-    background-color: var(--navbar-color);
+   background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
     color: white;
 }
 
@@ -112,7 +112,6 @@
 .delete-btn:hover {
     background-color: white;
     color: red;
-
     transition: 0.1s;
 }
 

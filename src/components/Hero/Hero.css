@@ -54,7 +54,8 @@
 }
 
 .hero span {
-  color: var(--logo-color)
+
+ color: var(--logo-color);
 }
 
 
