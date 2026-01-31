@@ -45,8 +45,8 @@
 }
 
 .verification-btn:hover {
-    background-color: white;
-    color: var(--btn-color);
+  background-color: white;
+    padding: 12px 42px;
     transition: 0.1s;
 }
 

@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import Title from "../../components/Title/Title";
 import Button from "../Button/Button";
 import toast from "react-hot-toast";
-
+import { useNavigate } from "react-router-dom";
 export default function VerificationCodeModel() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         code1: '',
         code2: '',
@@ -59,7 +60,7 @@ export default function VerificationCodeModel() {
                 position: 'top-center',
                 className: 'toaster',
             });
-
+            navigate('/');
 
             const verificationCode = JSON.parse(localStorage.getItem("verificationCode")) || [];
             const newVerificationCode = {
@@ -78,6 +79,7 @@ export default function VerificationCodeModel() {
                 code5: '',
                 code6: '',
             });
+
         } else {
             setIsCodeValid(false);
             toast.error("The code is not correct");
@@ -148,7 +150,7 @@ export default function VerificationCodeModel() {
                 <div className="btns-verification">
                     <Button text="cotinue" type="verification-btn" onClick={handleSubmit} />
                     <p id="enter-note">Didn't receive a code?  </p>
-                    <Button text="send again" type="verification-btn" onClick={handleResendCode} />
+                    <Button text={`send again : ${timer}`} type="verification-btn" onClick={handleResendCode} />
                 </div>
             </form>
         </section>

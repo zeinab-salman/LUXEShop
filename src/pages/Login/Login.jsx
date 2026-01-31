@@ -8,7 +8,6 @@ import { toast } from "react-hot-toast";
 export default function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,7 +35,7 @@ export default function Login() {
     }
 
     login("dummy-token", user);
-    navigate("/");
+    navigate("/VerificationCode");
   };
 
   return (
