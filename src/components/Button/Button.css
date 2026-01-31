@@ -17,7 +17,7 @@
 }
 
 .details-btn {
-     background: linear-gradient(to right, var(--btn-color), #0444a9);
+    background: linear-gradient(to right, var(--btn-color), #0444a9);
     color: white;
     border-radius: 5%;
     padding: 15px 146px;
@@ -35,8 +35,23 @@
 
 }
 
+.verification-btn {
+    background: linear-gradient(to right, var(--btn-color), #0444a9);
+    color: white;
+    border-radius: 5%;
+    padding: 15px 6px;
+    border: none;
+    font-weight: bold;
+}
+
+.verification-btn:hover {
+    background-color: white;
+    color: var(--btn-color);
+    transition: 0.1s;
+}
+
 .product-item-btn {
-     background: linear-gradient(to right, var(--btn-color), #0444a9);
+    background: linear-gradient(to right, var(--btn-color), #0444a9);
     color: white;
     border-radius: 5%;
     padding: 10px 20px;
@@ -48,7 +63,7 @@
 
 .product-item-btn:hover {
     background: white;
-   color: var(--btn-color);
+    color: var(--btn-color);
     border: 2px solid var(--btn-color);
     transition: 0.5s;
 }
@@ -93,7 +108,7 @@
 }
 
 .active {
-   background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
+    background: linear-gradient(to right, var(--navbar-color), #1e365e);
     color: white;
 }
 

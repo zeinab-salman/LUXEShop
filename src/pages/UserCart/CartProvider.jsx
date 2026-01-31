@@ -13,7 +13,7 @@ export const CartProvider = ({ children }) => {
 
 
   useEffect(() => {
-    if (!userId) return; 
+    if (!userId) return;
 
     const savedCart = localStorage.getItem(`cart_${userId}`);
     const savedOrders = localStorage.getItem(`orders_${userId}`);
@@ -38,7 +38,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     if (!userId) {
-      alert("ا  please ");
+      alert("  please  ");
       return;
     }
 

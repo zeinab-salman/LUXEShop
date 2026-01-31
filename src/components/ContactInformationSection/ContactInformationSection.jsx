@@ -23,23 +23,7 @@ export default function ContactInformationSection() {
             [name]: value
         });
     };
-    const handleSubmit = (event) => {
-         const subjects = JSON.parse(localStorage.getItem("subjects")) || [];
-        event.preventDefault();
-        console.log("done", formData);
-        alert(`${formData.username}`);
-        const newSubject = {
-            id: Date.now(),
-            name: formData.name,
-            email: formData.email.trim(),
-            subject: formData.subject,
-            message: formData.message,
-        };
-
-        subjects.push(newSubject);
-        localStorage.setItem("subjects", JSON.stringify(subjects));
-    };
-
+   
 
     return (
         <>

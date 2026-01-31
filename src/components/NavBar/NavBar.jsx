@@ -12,7 +12,6 @@ import { GiWallet } from "react-icons/gi";
 import ProfileModel from "../../components/ProfileModel/ProfileModel";
 import WalletModel from "../../components/WalletModel/WalletModel"
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 export default function NavBar() {
   const navigate = useNavigate();
   const [profileOpen, setProfileOpen] = useState(false);
@@ -48,24 +47,9 @@ export default function NavBar() {
 
 
       <div className='logo'>
-        <motion.h1
-          animate={{
-            scale: [1, 1.1, 1],
-            textShadow: [
-              "0px 0px 0px rgba(0,112,243,0)",
-              "0px 0px 20px rgba(0,112,243,0.5)",
-              "0px 0px 0px rgba(0,112,243,0)"
-            ]
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-
-        >
+      <h1>
          <a href='/' id='logo-link'> LUXE<span id='nav-right'>SHOP</span></a>
-        </motion.h1>
+       </h1>
       </div>
       <div className="btn-open" onClick={listdown}>
         <div className='line'> </div>

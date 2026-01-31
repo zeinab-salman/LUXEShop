@@ -2,10 +2,10 @@
     width: 100%;
     padding: 100px 70px;
     padding-top: 150px;
-    background-color: var(--navbar-color);
+    
     gap: 30px;
     border-radius: 2rem;
-
+ background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
 
 }
 

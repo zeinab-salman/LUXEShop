@@ -1,22 +1,139 @@
-.verification-section{
-padding: 100px 100px;
-width: 100%;
-height: 100vh;
-flex-direction: column;
-background-color: var(--bg-color);
-}
-.verification-section form{
+.verification-section {
+    padding: 150px 100px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+
+}
+
+.verification-section form {
+    padding: 20px 100px;
+    width: 75%;
+    margin-top: 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 2px solid var(--logo-color);
+    border-radius: 5%;
+    background-color: var(--navbar-color);
+    box-shadow: 1px 1px 20px 0px white;
+    background: linear-gradient(to right, var(--navbar-color), #1e365e);
+
+}
+
+.verification-section button {
+    width: 100% !important;
+    margin-bottom: 30px;
+}
+
+.inputs-verification {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: 60px;
+}
+
+#enter-note {
+    color: var(--logo-color);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#send-note {
+    color: var(--navbar-color);
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: "Crimson Text", serif;
+
+}
+
+#send-note span {
+    color: var(--logo-color);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.inputs-verification input {
+    padding: 20px 20px;
+    border-radius: 4px;
     width: 100%;
+
 }
-.verification-section button{
-    width:100% !important;
-   
+
+.btns-verification {
+    gap: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-.inputs input{
-    padding: 50px 10px;
-    border-radius: 2rem;
+
+@media (max-width:1290px) {
+    .verification-section {
+        padding: 120px 10px;
+    }
+
+    .inputs-verification input {
+
+        padding: 3% 2rem;
+        border-radius: 4px;
+        width: 100%;
+
+    }
+
+    #send-note {
+        font-size: 2rem;
+
+    }
+
+    #enter-note {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:700px) {
+
+  .inputs-verification input {
+        padding: 3% 1.4rem;
+        border-radius: 4px;
+        width: 100%;
+
+    }
+    .inputs-verification {
+        width: 100%;
+        gap: 5%;
+    }
+}
+
+@media (max-width:600px) {
+
+  
+
+}
+
+@media (max-width:400px) {
+
+    .inputs-verification {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .inputs-verification input {
+        width: 20%;
+    }
+
+    .verification-section form {
+        padding: 20px 0px;
+    }
 }
