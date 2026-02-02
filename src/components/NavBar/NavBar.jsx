@@ -19,7 +19,7 @@ export default function NavBar() {
   const [walletOpen, setWalletOpen] = useState(false);
   const { user, logout } = useAuth();
   const [maisopen, setmaisopen] = useState(false);
-  const [listOpen, setListOpen] = useState(false);
+  const [listOpen, setListOpen] = useState(true);
   const [mascroll, masetScroll] = useState(false);
   const listdown = () => {
     setmaisopen(!maisopen);

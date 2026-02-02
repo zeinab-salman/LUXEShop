@@ -1,0 +1,50 @@
+.sec-products-dash {
+  background: linear-gradient(to right, var(--navbar-color), #1e365e);
+  width: 100%;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 50px;
+  padding: 100px 0px;
+  position: relative;
+  padding-left: 150px;
+
+
+}
+
+.title-dash2 {
+  color: white !important;
+
+}
+
+.plus-icon {
+
+  font-size: 2rem;
+
+}
+
+.head-search {
+  width: 100%;
+
+}
+
+.add-btn {
+  background-color: var(--logo-color);
+  border: none;
+  border-radius: 2rem;
+  width: 200px;
+  gap: 20px;
+  padding: 10px 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.add-btn:hover {
+  background-color: white;
+  color: var(--logo-color);
+}
+@media (max-width:1000px) {
+  .sec-products-dash{
+    padding: 100px 10px;
+  }
+}

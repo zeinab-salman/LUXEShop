@@ -21,6 +21,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import NavBar from "../src/components/NavBar/NavBar";
 import Footer from "../src/components/Footer/Footer";
 import { useLocation } from "react-router-dom";
+import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard"
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -35,7 +36,7 @@ export default function App() {
   }, []);
 
   const location = useLocation();
-  const hideLayout = ["/HomeDashboard"].includes(location.pathname);
+  const hideLayout = ["/HomeDashboard" , "/ProductsDashboard"].includes(location.pathname);
   return (
     <>
       <Toaster />
@@ -56,6 +57,7 @@ export default function App() {
             <Route path="/UserOrders" element={<UserOrder />} />
             <Route path="/VerificationCode" element={<VerificationCodeModel />} />
             <Route path="/HomeDashboard" element={<HomeDashboard />} />
+             <Route path="/ProductsDashboard" element={<ProductsDashboard />} />
           </Routes>
         }
         {!hideLayout && <Footer />}

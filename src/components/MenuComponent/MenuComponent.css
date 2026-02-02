@@ -1,6 +1,6 @@
 
 .menu-nav {
-    background-color: var(--navbar-color);
+    background-color: var(--navbar-color) !important;
     width: 14rem;
     height: 100%;
     padding: 150px 10px;
@@ -14,6 +14,7 @@
     box-shadow: 1px 1px 20px 0px var(--bg-color);
     transform: translateX(0);  
     transition: transform 0.3s ease;
+    z-index: 10000 !important;
 }
 
 
@@ -71,6 +72,7 @@
 .icon-menu {
     margin-right: 10px;
     color: var(--logo-color);
+    z-index: 12000;
 }
 .display-none-icon{
     display: none;

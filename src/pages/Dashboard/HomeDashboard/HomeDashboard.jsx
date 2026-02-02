@@ -9,7 +9,11 @@ export default function HomeDashboard() {
     <>
       <section className="home-dashboard-section">
 
-        <Title title="Welcome back to LUXESHOP admin   " type="sections-description" line="line-sec" className=" title-dash" />
+        <Title
+          title="Welcome back to LUXESHOP admin "
+          type="sections-description"
+          line="line-sec"
+          className=" title-dash" />
         <MenuComponent />
         <StatisticSection />
         <ChartComponent />

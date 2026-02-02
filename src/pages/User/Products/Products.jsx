@@ -1,12 +1,21 @@
 import "./Products.css"
-import { ProductsData } from "../../../components/Data/ProductsData";
 import ProductCom from "../../../components/productCom/ProductCom";
 import Title from "../../../components/Title/Title";
 import SearchInputComponent from "../../../components/SearchInputComponent/SearchInputComponent";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 export default function Products() {
+ const [products, setProducts] = useState(() => {
+    const saved = localStorage.getItem("all-products");
+    return saved ? JSON.parse(saved) : [];
+});
+
+useEffect(() => {
+    localStorage.setItem("all-products", JSON.stringify(products));
+}, [products]);
+
+
     const [searchTerm, setSearchTerm] = useState("");
-    const filteredProducts = ProductsData.filter((product) => {
+    const filteredProducts = products.filter((product) => {
         const matchesName = product.name?.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
 
         return matchesName;

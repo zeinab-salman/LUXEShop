@@ -23,7 +23,7 @@
 }
 
 .motion-div-search{
-    width: 100%;
+    width: 50%;
 }
 @media (max-width:1000px) {
     .search-input{width: 70%;}
