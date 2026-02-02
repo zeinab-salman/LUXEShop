@@ -1,0 +1,7 @@
+.recent-orders-section {
+  background: linear-gradient(to right, var(--navbar-color), #1e365e);
+  width: 100%;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 50px;
+}

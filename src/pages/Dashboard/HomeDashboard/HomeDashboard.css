@@ -1,0 +1,22 @@
+.home-dashboard-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 150px;
+  padding-left: 200px;
+  background-color: var(--navbar-color);
+  color: white;
+}
+
+.title-dash {
+  color: white !important;
+}
+@media (max-width:1000px) {
+  .home-dashboard-section{
+    padding-left: 0px;
+  }
+}

@@ -10,15 +10,16 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaListUl } from "react-icons/fa6";
 import { GiWallet } from "react-icons/gi";
 import ProfileModel from "../../components/ProfileModel/ProfileModel";
-import WalletModel from "../../components/WalletModel/WalletModel"
+import WalletModel from "../../components/WalletModel/WalletModel";
+import HomeDashboard from '../../pages/Dashboard/HomeDashboard/HomeDashboard';
 import { useNavigate } from 'react-router-dom';
 export default function NavBar() {
   const navigate = useNavigate();
   const [profileOpen, setProfileOpen] = useState(false);
   const [walletOpen, setWalletOpen] = useState(false);
   const { user, logout } = useAuth();
-  const [maisopen, setmaisopen] = useState(false)
-  const [listOpen, setListOpen] = useState(false)
+  const [maisopen, setmaisopen] = useState(false);
+  const [listOpen, setListOpen] = useState(false);
   const [mascroll, masetScroll] = useState(false);
   const listdown = () => {
     setmaisopen(!maisopen);
@@ -102,6 +103,9 @@ export default function NavBar() {
             </li>
             <li   className='li-nav2'>
               <GiWallet onClick={() => setWalletOpen(true)} className='z-details cart-icon2' />
+            </li>
+             <li   className='li-nav2'>
+               <NavLink to={'/HomeDashboard'} className='z-details cart-icon2' onClick={listdown}> Dashboard</NavLink>
             </li>
             <li>
               <Button className='z-details cart-icon' onClick={logout} type="logout-btn" text="Logout"></Button>
