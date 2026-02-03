@@ -21,7 +21,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import NavBar from "../src/components/NavBar/NavBar";
 import Footer from "../src/components/Footer/Footer";
 import { useLocation } from "react-router-dom";
-import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard"
+import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard";
+import OrdersDashboard from "./pages/Dashboard/OrdersDashboard/OrdersDashboard";
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -36,12 +37,18 @@ export default function App() {
   }, []);
 
   const location = useLocation();
-  const hideLayout = ["/HomeDashboard" , "/ProductsDashboard"].includes(location.pathname);
+  const hideLayout = ["/HomeDashboard" , "/ProductsDashboard" , "/OrdersDashboard"].includes(location.pathname);
+  const [notification, setNotification] = useState(""); // حالة لإظهار الإشعار
+    const [showNotif, setShowNotif] = useState(false); // حالة لتحديد ما إذا كان الإشعار سيظهر أم لا
+
+   
+
   return (
     <>
       <Toaster />
       <CartProvider>
-        {!hideLayout && <NavBar />}
+        {!hideLayout && <NavBar  />}
+      
         {loading ? <Loading /> :
           <Routes>
             <Route path="/" element={<Home />} />
@@ -58,6 +65,7 @@ export default function App() {
             <Route path="/VerificationCode" element={<VerificationCodeModel />} />
             <Route path="/HomeDashboard" element={<HomeDashboard />} />
              <Route path="/ProductsDashboard" element={<ProductsDashboard />} />
+              <Route path="/OrdersDashboard" element={<OrdersDashboard />} />
           </Routes>
         }
         {!hideLayout && <Footer />}

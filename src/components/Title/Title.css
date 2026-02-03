@@ -27,6 +27,10 @@
   text-align: center;
 
 }
+ .title-dash2 {
+   color: white !important;
+  
+  }
 
 @media (max-width:1000px) {
   .text1 {
@@ -39,5 +43,6 @@
 
   .title-text {
     text-align: center;
+    color: white !important;
   }
 }

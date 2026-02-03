@@ -66,6 +66,7 @@ const { storeOrders } = useStore();
 
     const newOrder = {
       id: Date.now(),
+      status:"in-progress",
       items: pendingCheckout,
       total: pendingCheckout.reduce((acc, i) => acc + i.price * i.quantity, 0),
       date: new Date().toLocaleDateString()

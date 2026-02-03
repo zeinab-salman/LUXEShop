@@ -25,7 +25,9 @@
     padding: 20px;
     position: relative;
 }
-
+.delivered-status{
+    color: white;
+}
 .order-id {
     background-color: var(--logo-color);
     padding: 2px 20px;

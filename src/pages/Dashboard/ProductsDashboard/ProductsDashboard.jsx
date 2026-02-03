@@ -43,13 +43,13 @@ export default function ProductsDashboard() {
 
     return (
         <>
-        
+
             <section className="flex-center sec-products-dash">
                 <Title
-                    title="Your Products - Add, Edit & Delete"
+                    title="Your Products - Add & Edit & Delete"
                     type="sections-description"
                     line="line-sec"
-                    className="title-dash2"
+                    type2="title-dash2"
                 />
                 <div className="flex-center head-search">
                     <SearchInputComponent

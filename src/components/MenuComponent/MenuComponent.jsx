@@ -45,7 +45,7 @@ export default function MenuComponent() {
           </li>
 
           <li className="li-menu">
-            <NavLink to="/AdminOrders">
+            <NavLink to="/OrdersDashboard">
               <MdBorderColor className="icon-menu" />
               Orders
             </NavLink>

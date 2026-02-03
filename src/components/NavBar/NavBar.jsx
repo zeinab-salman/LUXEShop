@@ -13,7 +13,12 @@ import ProfileModel from "../../components/ProfileModel/ProfileModel";
 import WalletModel from "../../components/WalletModel/WalletModel";
 import HomeDashboard from '../../pages/Dashboard/HomeDashboard/HomeDashboard';
 import { useNavigate } from 'react-router-dom';
+
 export default function NavBar() {
+  const [isActive, setIsActive] = useState(false);
+
+  
+    ///////
   const navigate = useNavigate();
   const [profileOpen, setProfileOpen] = useState(false);
   const [walletOpen, setWalletOpen] = useState(false);
@@ -58,6 +63,7 @@ export default function NavBar() {
         <div className='line'></div>
       </div>
       <ul className={`z-links ${maisopen ? 'z-link-open' : ''}`} >
+        
         <li className='li-nav1'>
           <NavLink to={'/'} className='z-home' onClick={listdown}>Home</NavLink>
         </li>

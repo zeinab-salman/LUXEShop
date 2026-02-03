@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, var(--navbar-color), #1e365e);
-    box-shadow: 1px 1px 20px 0px var(--bg-color);
+    box-shadow: 1px 1px 13px 0px var(--bg-color);
 }
 
 .stat-card p {
