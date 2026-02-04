@@ -45,7 +45,7 @@ export default function UsersDashboard() {
           );
         })
       ) : (
-        <p className="no-users-message">No users available.</p>
+        <p className="no-users-message empty-sec">No users available.</p>
       )}
     </section>
   );

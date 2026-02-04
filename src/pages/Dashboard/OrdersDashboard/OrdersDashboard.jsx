@@ -110,7 +110,8 @@ export default function OrdersDashboard() {
           );
         })
       ) : (
-        <p>No orders available.</p>
+     
+        <p className="empty-sec">No orders available.</p>
       )}
     </section>
   );

@@ -65,7 +65,7 @@ export default function ProductsDashboard() {
                 <MenuComponent />
 
                 {filteredProducts.length === 0 ? (
-                    <p className="not-found-text">No Products found.</p>
+                    <p className="not-found-text empty-sec">No Products found.</p>
                 ) : (
                     filteredProducts.map(product => (
                         <ProductItemDashboard

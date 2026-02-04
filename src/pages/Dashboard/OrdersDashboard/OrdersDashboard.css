@@ -11,6 +11,11 @@ background: linear-gradient(to right, var(--navbar-color), #1e365e);
 
 
 }
+.empty-sec{
+    
+    height: 100vh;
+  
+}
 @media (max-width:1000px) {
     .orders-dash-section{
         padding:100px 10px ;
