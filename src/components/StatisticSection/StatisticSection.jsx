@@ -5,48 +5,50 @@ import { CalculateStatistic } from "../StatisticComponent/CalculateStatistic";
 
 export default function StatisticSection() {
 
+  // جلب الطلبات من localStorage
   const StoredOrders = useMemo(() => {
     try {
-      return JSON.parse(localStorage.getItem("all-orders")) || [];
+      const orders = JSON.parse(localStorage.getItem("all-orders"));
+      return Array.isArray(orders) ? orders : [];
     } catch {
       return [];
     }
   }, []);
 
+  // جلب المستخدمين من localStorage
   const StoredUsers = useMemo(() => {
     try {
-      return JSON.parse(localStorage.getItem("all-users")) || [];
-
+      const users = JSON.parse(localStorage.getItem("all-users"));
+      return Array.isArray(users) ? users : [];
     } catch {
       return [];
     }
   }, []);
-  console.log(StoredUsers);
 
+  console.log("StoredUsers:", StoredUsers);
 
+  // إضافة تاريخ افتراضي لكل مستخدم إن لزم
   const usersWithDate = StoredUsers.map(user => ({
     ...user,
-    date: new Date().toISOString()
+    date: user.date || new Date().toISOString()
   }));
 
-
-
-
+  // إحصائيات الإيرادات
   const revenueStats = useMemo(
     () => CalculateStatistic(StoredOrders, "total"),
     [StoredOrders]
   );
 
-
+  // إحصائيات الطلبات
   const ordersStats = useMemo(
     () => CalculateStatistic(StoredOrders),
     [StoredOrders]
   );
 
-
+  // إحصائيات المستخدمين
   const usersStats = useMemo(
     () => CalculateStatistic(usersWithDate),
-    [StoredUsers]
+    [usersWithDate]
   );
 
   return (

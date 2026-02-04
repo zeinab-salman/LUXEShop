@@ -23,6 +23,7 @@ import Footer from "../src/components/Footer/Footer";
 import { useLocation } from "react-router-dom";
 import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard";
 import OrdersDashboard from "./pages/Dashboard/OrdersDashboard/OrdersDashboard";
+import UsersDashboard from "./pages/Dashboard/UsersDashboard/UsersDashboard";
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -37,9 +38,8 @@ export default function App() {
   }, []);
 
   const location = useLocation();
-  const hideLayout = ["/HomeDashboard" , "/ProductsDashboard" , "/OrdersDashboard"].includes(location.pathname);
-  const [notification, setNotification] = useState(""); // حالة لإظهار الإشعار
-    const [showNotif, setShowNotif] = useState(false); // حالة لتحديد ما إذا كان الإشعار سيظهر أم لا
+  const hideLayout = ["/HomeDashboard" , "/ProductsDashboard" , "/OrdersDashboard" , "/UsersDashboard"].includes(location.pathname);
+ 
 
    
 
@@ -66,6 +66,7 @@ export default function App() {
             <Route path="/HomeDashboard" element={<HomeDashboard />} />
              <Route path="/ProductsDashboard" element={<ProductsDashboard />} />
               <Route path="/OrdersDashboard" element={<OrdersDashboard />} />
+               <Route path="/UsersDashboard" element={<UsersDashboard />} />
           </Routes>
         }
         {!hideLayout && <Footer />}

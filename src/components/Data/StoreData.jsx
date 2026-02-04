@@ -9,12 +9,30 @@ export const StoreData = ({ children }) => {
   const [allWallets, setAllWallets] = useState(() => JSON.parse(localStorage.getItem("wallets")) || []);
 
   // دالة لتخزين بيانات المستخدمين
+  //const storeUsers = (userData) => {
+   // let allUsers = JSON.parse(localStorage.getItem("all-users")) || [];
+    //allUsers.push(userData); // إضافة مستخدم جديد
+    //localStorage.setItem("all-users", JSON.stringify(allUsers)); // تخزين البيانات في localStorage
+   // setAllUsers(allUsers); // تحديث الحالة
+ // };
   const storeUsers = (userData) => {
-    let allUsers = JSON.parse(localStorage.getItem("all-users")) || [];
-    allUsers.push(userData); // إضافة مستخدم جديد
-    localStorage.setItem("all-users", JSON.stringify(allUsers)); // تخزين البيانات في localStorage
-    setAllUsers(allUsers); // تحديث الحالة
-  };
+  let allUsers = JSON.parse(localStorage.getItem("all-users")) || [];
+
+  // تحقق إذا كان المستخدم موجودًا مسبقًا (مثلاً حسب email)
+  const existingIndex = allUsers.findIndex(u => u.email === userData.email);
+
+  if (existingIndex !== -1) {
+    // تحديث المستخدم الموجود
+    allUsers[existingIndex] = userData;
+  } else {
+    // إضافة مستخدم جديد
+    allUsers.push(userData);
+  }
+
+  localStorage.setItem("all-users", JSON.stringify(allUsers));
+  setAllUsers(allUsers);
+};
+
 
   // دالة لتخزين بيانات الطلبات
   const storeOrders = (userId, ordersData) => {

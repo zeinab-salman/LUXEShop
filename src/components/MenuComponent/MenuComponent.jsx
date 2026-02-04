@@ -52,7 +52,7 @@ export default function MenuComponent() {
           </li>
 
           <li className="li-menu">
-            <NavLink to="/AdminCustomemrs">
+            <NavLink to="/UsersDashboard">
               <MdPeopleAlt className="icon-menu" />
               Customers
             </NavLink>

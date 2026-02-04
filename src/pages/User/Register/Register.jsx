@@ -1,12 +1,24 @@
 import './Register.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import FormInput from '../../../components/FormInput/FormInput';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
-
+import { useLocation } from 'react-router-dom';
 import { useStore } from '../../../components/Data/StoreData';
 export default function Register() {
+  const { state } = useLocation(); // الحصول على البيانات المرسلة من الصفحة الأخرى
+  const isBlocked = state?.isBlocked; // التحقق مما إذا تم إرسال قيمة isBlocked
+  
+  const [status1, setStatus1] = useState("active"); // القيمة الافتراضية هي "نشط"
+  console.log(status1);
+  // عندما نصل إلى هذه الصفحة، نحدث status1 بناءً على isBlocked
+  useEffect(() => {
+    if (isBlocked !== undefined) {
+      setStatus1(isBlocked ? "blocked" : "active");
+    }
+  }, [isBlocked]); // يتم التحديث عند تغير قيمة isBlocked
+
   const { storeUsers } = useStore();
   console.log(localStorage);
   const navigate = useNavigate();
@@ -54,9 +66,10 @@ export default function Register() {
       email: form.email.trim(),
       password: form.password.trim(),
       address: "",
-      photo: ""
+      photo: "",
+      status1:"active",
     };
-
+ 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
@@ -71,11 +84,11 @@ export default function Register() {
     
  storeUsers(newUser); 
  
-  
 
     navigate("/login");
   };
 console.log(localStorage);
+
   return (
     <section className='register-sec flex-center'>
       <motion.div
