@@ -109,7 +109,7 @@ export const ProductsData = [
         date: "2024-01-01"
     }
 ];
-
+ localStorage.setItem("all-products", JSON.stringify(ProductsData));
 // ✅ نحفظ البيانات مرة واحدة فقط
 const storedProducts = localStorage.getItem("all-products");
 
