@@ -24,6 +24,7 @@ import { useLocation } from "react-router-dom";
 import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard";
 import OrdersDashboard from "./pages/Dashboard/OrdersDashboard/OrdersDashboard";
 import UsersDashboard from "./pages/Dashboard/UsersDashboard/UsersDashboard";
+
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
@@ -38,17 +39,18 @@ export default function App() {
   }, []);
 
   const location = useLocation();
-  const hideLayout = ["/HomeDashboard" , "/ProductsDashboard" , "/OrdersDashboard" , "/UsersDashboard"].includes(location.pathname);
- 
+  const hideLayout = ["/HomeDashboard", "/ProductsDashboard", "/OrdersDashboard", "/UsersDashboard"].includes(location.pathname);
 
-   
+
+  localStorage.setItem('user', JSON.stringify({ username: 'admin', role: 'admin' }));
+
 
   return (
     <>
       <Toaster />
       <CartProvider>
-        {!hideLayout && <NavBar  />}
-      
+        {!hideLayout && <NavBar />}
+
         {loading ? <Loading /> :
           <Routes>
             <Route path="/" element={<Home />} />
@@ -63,10 +65,14 @@ export default function App() {
             <Route path="/Collection" element={<Collection />} />
             <Route path="/UserOrders" element={<UserOrder />} />
             <Route path="/VerificationCode" element={<VerificationCodeModel />} />
-            <Route path="/HomeDashboard" element={<HomeDashboard />} />
-             <Route path="/ProductsDashboard" element={<ProductsDashboard />} />
-              <Route path="/OrdersDashboard" element={<OrdersDashboard />} />
-               <Route path="/UsersDashboard" element={<UsersDashboard />} />
+            <Route
+              path="/HomeDashboard"
+              element={<HomeDashboard />}
+            />
+
+            <Route path="/ProductsDashboard" element={<ProductsDashboard />} />
+            <Route path="/OrdersDashboard" element={<OrdersDashboard />} />
+            <Route path="/UsersDashboard" element={<UsersDashboard />} />
           </Routes>
         }
         {!hideLayout && <Footer />}

@@ -110,9 +110,7 @@ export default function NavBar() {
             <li   className='li-nav2'>
               <GiWallet onClick={() => setWalletOpen(true)} className='z-details cart-icon2' />
             </li>
-             <li   className='li-nav2'>
-               <NavLink to={'/HomeDashboard'} className='z-details cart-icon2' onClick={listdown}> Dashboard</NavLink>
-            </li>
+            
             <li>
               <Button className='z-details cart-icon' onClick={logout} type="logout-btn" text="Logout"></Button>
 
