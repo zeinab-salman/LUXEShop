@@ -21,10 +21,9 @@ import toast, { Toaster } from 'react-hot-toast';
 import NavBar from "../src/components/NavBar/NavBar";
 import Footer from "../src/components/Footer/Footer";
 import { useLocation } from "react-router-dom";
-import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard";
 import OrdersDashboard from "./pages/Dashboard/OrdersDashboard/OrdersDashboard";
 import UsersDashboard from "./pages/Dashboard/UsersDashboard/UsersDashboard";
-
+import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashboard";
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
