@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./OrderDashboardItem.css";
+import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import { motion } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
+import "./OrderDashboardItem.css";
 export default function OrderDashboardItem({
   id,
   name,
@@ -14,17 +14,34 @@ export default function OrderDashboardItem({
   status,
 }) {
   const [isChecked, setIsChecked] = useState(false);
+  const navigate = useNavigate();
 
-  const handleCheckboxChange = () => {
-    setIsChecked((prevChecked) => {
-      const newChecked = !prevChecked;
-
-      if (newChecked) {
-        onOrderCompleted(id);
-        console.log(`Order #${id} has been marked as delivered.`);
+  useEffect(() => {
+    const orders = JSON.parse(localStorage.getItem("all-orders")) || [];
+    const order = orders.find((o) => o.userId.id === id);
+    if (order) {
+      setIsChecked(order.userId.status === "delivered");
+    }
+  }, [id]);
+  const handleCheckBoxChange = () => {
+    const orders = JSON.parse(localStorage.getItem("all-orders")) || [];
+    const updatedOrders = orders.map((order) => {
+      if (order.id === id) {
+        const updatedStatus = !isChecked ? "delivered" : "in-progress";
+        order.status = updatedStatus;
       }
+      return order;
+    });
 
-      return newChecked;
+    localStorage.setItem("all-orders", JSON.stringify(updatedOrders));
+    setIsChecked((prevStatus) => {
+      const newStatus = prevStatus;
+      console.log("newStatus: ", newStatus);
+      navigate("/UserOrders", {
+        state: { isChecked: newStatus },
+      });
+
+      return newStatus;
     });
   };
 
@@ -51,10 +68,10 @@ export default function OrderDashboardItem({
             <Form>
               <Form.Check
                 type="checkbox"
-                label="Order delivered"
+                label={isChecked ? "delivered" : "in progress"}
                 className="order-checkbox"
-                checked={isChecked || status === "done"}
-                onChange={handleCheckboxChange}
+                checked={isChecked}
+                onChange={handleCheckBoxChange}
               />
             </Form>
           </li>

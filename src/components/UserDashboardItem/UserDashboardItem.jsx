@@ -12,6 +12,7 @@ export default function UserDashboardItem({
   email,
   address,
   status1,
+  role
 }) {
   const navigate = useNavigate();
   const defaultImage = img1;
@@ -21,6 +22,14 @@ export default function UserDashboardItem({
     return new Date(date).toLocaleDateString("en-US", options);
   };
   const [isBlocked, setIsBlocked] = useState(status1 === "blocked");
+  const [isAdmin, setIsAdmin] = useState(role === "admin");
+  useEffect(()=>{
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find((u) => u.id === id);
+    if (user) {
+      setIsAdmin(user.role === "admin");
+    }
+  },[id]);
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const user = users.find((u) => u.id === id);
@@ -44,6 +53,25 @@ export default function UserDashboardItem({
       state: { isBlocked: !isBlocked },
     });
   };
+//////
+ const toggleAdmin = () => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const updatedUsers = users.map((user) => {
+      if (user.id === id) {
+        user.role = !isAdmin ? "admin" : "user";
+      }
+      return user;
+    });
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+    setIsAdmin((prevStatus) => !prevStatus);
+    navigate("/Login", {
+      state: { isAdmin: !isAdmin },
+    });
+
+  };
+
+/////
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -60,14 +88,22 @@ export default function UserDashboardItem({
           <li>{id}</li>
           <li>{name}</li>
           <li>{isBlocked ? "Blocked" : "Active"}</li>
+           <li>{isAdmin ? "admin" : "user"}</li>
           <li>{email || "No email available"}</li>
           <li>{formatDate(date)}</li>
           <li>{address || "No address available"}</li>
           <li>
             <Button
               text={isBlocked ? "Unblock User" : "Block User"}
-              type="hero-btn"
+              type="product-item-btn"
               onClick={toggleBlock}
+            />
+          </li>
+           <li>
+            <Button
+              text={isAdmin ? "User" : "Admin"}
+              type="product-item-btn"
+              onClick={toggleAdmin}
             />
           </li>
         </ul>

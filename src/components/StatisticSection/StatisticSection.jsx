@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import { CalculateStatistic } from "../StatisticComponent/CalculateStatistic";
 
 export default function StatisticSection() {
-
   // جلب الطلبات من localStorage
   const StoredOrders = useMemo(() => {
     try {
@@ -28,27 +27,27 @@ export default function StatisticSection() {
   console.log("StoredUsers:", StoredUsers);
 
   // إضافة تاريخ افتراضي لكل مستخدم إن لزم
-  const usersWithDate = StoredUsers.map(user => ({
+  const usersWithDate = StoredUsers.map((user) => ({
     ...user,
-    date: user.date || new Date().toISOString()
+    date: user.date || new Date().toISOString(),
   }));
 
   // إحصائيات الإيرادات
   const revenueStats = useMemo(
     () => CalculateStatistic(StoredOrders, "total"),
-    [StoredOrders]
+    [StoredOrders],
   );
 
   // إحصائيات الطلبات
   const ordersStats = useMemo(
     () => CalculateStatistic(StoredOrders),
-    [StoredOrders]
+    [StoredOrders],
   );
 
   // إحصائيات المستخدمين
   const usersStats = useMemo(
     () => CalculateStatistic(usersWithDate),
-    [usersWithDate]
+    [usersWithDate],
   );
 
   return (

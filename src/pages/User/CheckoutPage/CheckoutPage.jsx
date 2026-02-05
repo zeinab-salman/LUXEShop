@@ -11,17 +11,11 @@ import { useWallet } from "../../../components/WalletModel/WalletProvider";
 import NavBar from "../../../components/NavBar/NavBar";
 import Footer from "../../../components/Footer/Footer";
 export default function CheckoutPage() {
-
-
   const navigate = useNavigate();
   const { rewardOrder } = useWallet();
 
-  const {
-    pendingCheckout,
-    totalPrice,
-    removeFromCheckout,
-    confirmFinalOrder,
-  } = useCart();
+  const { pendingCheckout, totalPrice, removeFromCheckout, confirmFinalOrder } =
+    useCart();
 
   const [formData, setFormData] = useState({
     username: "",
@@ -43,16 +37,16 @@ export default function CheckoutPage() {
     e.preventDefault();
 
     const isFormComplete = Object.values(formData).every(
-      (value) => value.trim() !== ""
+      (value) => value.trim() !== "",
     );
 
     if (!isFormComplete) {
-      toast.error("Please fill all fields",{
+      toast.error("Please fill all fields", {
         duration: 4000,
-        position: 'top-center',
+        position: "top-center",
         removeDelay: 1000,
-        toasterId: 'default',
-        className: 'toaster',
+        toasterId: "default",
+        className: "toaster",
       });
       return;
     }
@@ -74,20 +68,18 @@ export default function CheckoutPage() {
     confirmFinalOrder();
     rewardOrder();
 
-    toast.success("Order placed successfully!",{
-        duration: 4000,
-        position: 'top-center',
-        removeDelay: 1000,
-        toasterId: 'default',
-        className: 'toaster',
-
+    toast.success("Order placed successfully!", {
+      duration: 4000,
+      position: "top-center",
+      removeDelay: 1000,
+      toasterId: "default",
+      className: "toaster",
     });
     navigate("/UserOrders");
   };
 
   if (pendingCheckout.length === 0) {
     return (
-  
       <section className="cart-container empty-cart">
         <h2 className="no-list-text">Your Checkout list is empty 🛒</h2>
         <Link to="/">
@@ -98,7 +90,6 @@ export default function CheckoutPage() {
   }
 
   return (
-    
     <section className="cart-container-check">
       <Title title="Check Out" line="line" />
 
@@ -177,9 +168,5 @@ export default function CheckoutPage() {
         </div>
       </div>
     </section>
-  
   );
 }
-
-
-

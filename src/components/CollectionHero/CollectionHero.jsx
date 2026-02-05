@@ -1,4 +1,4 @@
-import "./CollectionHero.css"
+import "./CollectionHero.css";
 import { motion } from "framer-motion";
 import Title from "../Title/Title";
 import TypeWriterText from "../TypeWriterText/TypeWriterText";
@@ -14,17 +14,19 @@ export default function CollectionHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           whileInView={{ scale: 1.05 }}
-          className=''
+          className=""
         >
           <div className="flex-center hero-div1">
-            <Title title="Our"
-              span=" Collections"
-              text=""
+            <Title title="Our" span=" Collections" text="" />
+            <TypeWriterText
+              text=" Discover Timeless pieces , Explore Our Collections, Collections for you, Elevate your everyday style."
+              type="text1"
             />
-            <TypeWriterText text=" Discover Timeless pieces , Explore Our Collections, Collections for you, Elevate your everyday style." type="text1" />
           </div>
         </motion.div>
-        <Link to={'/Products'} className="btn-hero"><Button text="Products" type="hero-btn" /></Link>
+        <Link to={"/Products"} className="btn-hero">
+          <Button text="Products" type="hero-btn" />
+        </Link>
       </section>
     </>
   );

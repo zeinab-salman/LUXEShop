@@ -1,132 +1,119 @@
 .cart-container-check {
-
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   background-color: var(--bg-color);
-   padding-top: 100px;
-   padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--bg-color);
+  padding-top: 100px;
+  padding: 100px 100px;
 }
 
 .cart-info2 {
-   padding: 50px 0px;
-   gap: 4%;
-   display: flex;
-   align-items: start;
-   justify-content: center;
-   width: 100%;
-
+  padding: 50px 0px;
+  gap: 4%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
 }
-.btns-check{gap: 20px;}
+.btns-check {
+  gap: 20px;
+}
 .product-cart-check {
-
-   background-color: white;
-   color: var(--logo-color);
-   font-weight: bold;
-   list-style: none;
-   padding: 10px;
-   border-radius: 2px;
-   width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-   gap: 5px;
-   margin-top: 20px;
-
+  background-color: white;
+  color: var(--logo-color);
+  font-weight: bold;
+  list-style: none;
+  padding: 10px;
+  border-radius: 2px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 20px;
 }
 
 .product-cart-check img {
-   width: 5rem;
-   height: 5rem;
-   object-fit: cover;
-   border-radius: 100%;
-   gap: 20px;
-   margin-right: 20px;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 100%;
+  gap: 20px;
+  margin-right: 20px;
 }
 
-
 .product-cart-check:hover {
-   box-shadow: 1px 1px 20px 0px var(--logo-color);
-
+  box-shadow: 1px 1px 20px 0px var(--logo-color);
 }
 
 .details-cart-check {
-
-   top: 100px;
-   height: fit-content;
-   background-color: var(--navbar-color);
-   color: white;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   border-radius: 2rem;
-   padding: 20px 0px;
-   width: 100%;
-   width: 50%;
-
+  top: 100px;
+  height: fit-content;
+  background-color: var(--navbar-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  padding: 20px 0px;
+  width: 100%;
+  width: 50%;
 }
 
 .check-form {
-
-   color: white;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   padding: 80px 20px;
-   border: 2px solid var(--logo-color);
-   width: 42rem;
-   border-radius: 5%;
-   background-color: var(--navbar-color);
-   box-shadow: 1px 1px 20px 0px white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 20px;
+  border: 2px solid var(--logo-color);
+  width: 42rem;
+  border-radius: 5%;
+  background-color: var(--navbar-color);
+  box-shadow: 1px 1px 20px 0px white;
 }
 
 .check-form button {
-   background-color: white;
-   border: none;
-   background-color: var(--btn-color);
-   color: white;
-   padding: 5px 20px;
-   border-radius: 4rem;
-   margin-bottom: 20px;
-   margin-top: 20px;
-
+  background-color: white;
+  border: none;
+  background-color: var(--btn-color);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 4rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-.no-list-text{
-   text-align: center;
+.no-list-text {
+  text-align: center;
 }
-@media(max-width:1000px) {
-   .cart-container-check {
-      padding: 100px 20px;
-   }
+@media (max-width: 1000px) {
+  .cart-container-check {
+    padding: 100px 20px;
+  }
 
-   .cart-info2 {
-      flex-wrap: wrap;
-      gap: 10px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
+  .cart-info2 {
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-   .check-form {
-      width: 100%;
-   }
+  .check-form {
+    width: 100%;
+  }
 
-   .details-cart-check {
-      width: 100%;
-   }
-
+  .details-cart-check {
+    width: 100%;
+  }
 }
 
-@media(max-width:600px) {
-
-   .product-cart-check {
-      width: 70%;
-   }
-
-
-
+@media (max-width: 600px) {
+  .product-cart-check {
+    width: 70%;
+  }
 }

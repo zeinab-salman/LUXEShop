@@ -9,31 +9,30 @@
   position: fixed;
   background-color: var(--navbar-color);
 }
-#logo-link{
-text-decoration: none;
-color: white;
+#logo-link {
+  text-decoration: none;
+  color: white;
 }
 
 #nav-right {
   color: var(--logo-color) !important;
-
 }
 
 .z-navbar .logo h1 {
   color: white;
   font-size: 2.6rem;
 }
-.z-navbar .z-links  a{
+.z-navbar .z-links a {
   cursor: pointer !important;
 }
 
-.z-navbar .z-links  .li-nav1 a.active {
+.z-navbar .z-links .li-nav1 a.active {
   padding: 10px 5px;
   color: white;
-  background: linear-gradient( to right ,var(--navbar-color) , #1e365e);
+  background: linear-gradient(to right, var(--navbar-color), #1e365e);
 }
-.z-navbar .z-links  .li-nav2 a.active {
- padding: 10px 5px;
+.z-navbar .z-links .li-nav2 a.active {
+  padding: 10px 5px;
   background: none;
   color: white;
 }
@@ -46,7 +45,6 @@ color: white;
   padding: 24px 40px;
   border-radius: 12px;
   margin: 0px;
-
 }
 
 .z-navbar .z-links li a {
@@ -73,7 +71,6 @@ color: white;
 }
 
 .z-navbar .z-icon {
-
   display: flex;
   align-items: center;
   justify-content: end;
@@ -82,36 +79,26 @@ color: white;
   font-size: 25.5px;
 }
 
-
-
 .cart-icon2 {
-
-  color:var(--navbar-color) !important;
+  color: var(--navbar-color) !important;
   font-size: 25px !important;
   cursor: pointer;
-
-
-
 }
-.cart-icon22{
-   color: white!important;
+.cart-icon22 {
+  color: white !important;
   font-size: 25px !important;
   cursor: pointer;
-
 }
 
 .z-navbar .z-button {
   display: none;
 }
 
-
 .z-nav2 {
   background-color: #121a2ba9;
-
 }
 
 .btn-open {
-
   display: none;
   margin-bottom: 20px;
 }
@@ -127,7 +114,7 @@ color: white;
   margin-top: 270px;
   list-style: none;
   display: flex;
- 
+
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -137,26 +124,22 @@ color: white;
   gap: 20px;
   position: absolute;
   right: 170px;
-
 }
 
 .user-list li a.active {
-background-color: rgba(255, 255, 255, 0.01) !important;
-padding: 0px !important;
-font-size: 35px !important;
+  background-color: rgba(255, 255, 255, 0.01) !important;
+  padding: 0px !important;
+  font-size: 35px !important;
 }
 .list-none {
- display:none;
+  display: none;
 }
 
 @media (max-width: 1440px) {
- 
-
   .z-navbar .z-links {
     padding: 20px 30px;
     gap: 16px;
     border-radius: 10px;
-
   }
 
   .z-navbar .z-links li a.active {
@@ -171,7 +154,6 @@ font-size: 35px !important;
 
   .z-navbar .z-links li .z-details .active {
     margin-left: 30px;
-
   }
 
   .z-navbar .z-links li a {
@@ -179,22 +161,18 @@ font-size: 35px !important;
     line-height: 21px;
   }
 
-
   .z-navbar {
     height: 98px;
     padding: 18px 5.555%;
   }
-
-
 }
 
 @media (max-width: 950px) {
-   .user-list {
+  .user-list {
     width: 20%;
     margin-top: 0px;
     right: 0px;
     top: 10px;
-   
   }
   .z-navbar {
     height: 102px;
@@ -202,7 +180,7 @@ font-size: 35px !important;
   }
 
   .z-navbar .logo h1 {
-    font-size: 2rem
+    font-size: 2rem;
   }
 
   .z-navbar .z-links.z-link-open {
@@ -228,20 +206,17 @@ font-size: 35px !important;
   }
 
   .z-navbar .z-links,
-
   .z-navbar .z-button {
     display: none;
   }
 
-
   .z-nav2 {
-    padding: 10px 4.102564%
+    padding: 10px 4.102564%;
   }
 }
 
 @media (max-width: 390px) {
   .z-navbar ul li a {
     font-size: 10px;
-
   }
 }

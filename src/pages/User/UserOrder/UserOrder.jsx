@@ -1,5 +1,5 @@
 import "./UserOrder.css";
-import { useCart } from '../UserCart/CartProvider';
+import { useCart } from "../UserCart/CartProvider";
 import Button from "../../../components/Button/Button";
 import Title from "../../../components/Title/Title";
 import { MdCancel } from "react-icons/md";
@@ -7,19 +7,27 @@ import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SearchInputComponent from "../../../components/SearchInputComponent/SearchInputComponent";
-
+import { useLocation, useNavigate } from "react-router-dom";
 export default function UserOrder() {
+  const navigate = useNavigate();
+  const [status, setStatus] = useState("in progress");
+  const { state } = useLocation();
+  console.log(state?.isChecked);
+  useEffect(() => {
+    if (state?.isChecked !== undefined) {
+      setStatus(state.isChecked ? "delivered" : "in progress");
+    }
+  }, [state?.isChecked]);
   const { orders } = useCart();
   const [searchTerm, setSearchTerm] = useState("");
   const [allOrders, setAllOrders] = useState([]);
-
-  // تصفية الطلبات حسب البحث
-  const filteredOrders = orders.filter(order =>
-    order.id.toString().includes(searchTerm) ||
-    order.items.some(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  const filteredOrders = orders.filter(
+    (order) =>
+      order.id.toString().includes(searchTerm) ||
+      order.items.some((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      ),
   );
-
-  // جلب كل الطلبات من localStorage عند التحميل
   useEffect(() => {
     try {
       const storedData = JSON.parse(localStorage.getItem("all-orders")) || [];
@@ -28,7 +36,9 @@ export default function UserOrder() {
       console.error("Error reading orders:", error);
     }
   }, []);
+   console.log(orders);
   return (
+   
     <section className="orders-section flex-center">
       <Title title="My Orders" line="line-sec" type="sections-descriptions" />
       <SearchInputComponent
@@ -40,7 +50,7 @@ export default function UserOrder() {
         {filteredOrders.length === 0 ? (
           <p className="not-found-text">No orders found.</p>
         ) : (
-          filteredOrders.map(order => (
+          filteredOrders.map((order) => (
             <motion.div
               key={order.id}
               initial={{ opacity: 0, y: 20 }}
@@ -58,9 +68,13 @@ export default function UserOrder() {
                   <p>Total: ${order.total}</p>
                 </div>
                 <ul className="order-details">
-                  {order.items.map(item => (
+                  {order.items.map((item) => (
                     <li key={item.id}>
-                      <img src={item.img} alt={item.name} className="order-img" />
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="order-img"
+                      />
                       {item.name} - Quantity: {item.quantity}
                     </li>
                   ))}

@@ -19,7 +19,6 @@ export const WalletProvider = ({ children }) => {
       setWallet(defaultWallet());
       return;
     }
-
     const key = `wallet_${user.id}`;
     const storedWallet = localStorage.getItem(key);
 
@@ -41,7 +40,7 @@ export const WalletProvider = ({ children }) => {
     if (!amount || !transferNumber) return;
 
     const exists = wallet.transactions.some(
-      t => t.transferNumber === transferNumber
+      (t) => t.transferNumber === transferNumber,
     );
 
     if (exists) {
@@ -49,7 +48,7 @@ export const WalletProvider = ({ children }) => {
       return;
     }
 
-    setWallet(prev => ({
+    setWallet((prev) => ({
       ...prev,
       balance: prev.balance + Number(amount),
       transactions: [
@@ -70,7 +69,7 @@ export const WalletProvider = ({ children }) => {
       return;
     }
 
-    setWallet(prev => ({
+    setWallet((prev) => ({
       ...prev,
       balance: prev.balance + 5,
       rewardReceived: true,

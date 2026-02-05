@@ -1,12 +1,12 @@
-.filter-buttons{
-    gap: 5%;
-    justify-content: start;
-    padding: 0px 105px;
+.filter-buttons {
+  gap: 5%;
+  justify-content: start;
+  padding: 0px 105px;
 }
-@media (max-width:1260px) {
-    .filter-buttons{
-        padding: 0px 10px;
-        gap: 2%;
-        justify-content: center;
-    }
+@media (max-width: 1260px) {
+  .filter-buttons {
+    padding: 0px 10px;
+    gap: 2%;
+    justify-content: center;
+  }
 }

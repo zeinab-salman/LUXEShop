@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./TypeWriterText.css"
+import "./TypeWriterText.css";
 const TypeWriterText = ({ text, type }) => {
   const letters = Array.from(text);
   const containerVariants = {
@@ -8,7 +8,7 @@ const TypeWriterText = ({ text, type }) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.04 * i
+        delayChildren: 0.04 * i,
       },
     }),
   };
@@ -37,7 +37,7 @@ const TypeWriterText = ({ text, type }) => {
       className={`${type}`}
     >
       {letters.map((letter, index) => (
-        <motion.span variants={childVariants} key={index} className={`${type}`} >
+        <motion.span variants={childVariants} key={index} className={`${type}`}>
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}

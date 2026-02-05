@@ -16,7 +16,6 @@
   border-radius: 10%;
   background-color: var(--logo-color);
   margin-bottom: 20px;
-
 }
 
 .sections-description {
@@ -25,14 +24,12 @@
   width: 60%;
   margin-top: 20px;
   text-align: center;
-
 }
- .title-dash2 {
-   color: white !important;
-  
-  }
+.title-dash2 {
+  color: white !important;
+}
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .text1 {
     font-size: medium !important;
   }

@@ -1,12 +1,11 @@
-import "./Collection.css"
+import "./Collection.css";
 import CollectionHero from "../../../components/CollectionHero/CollectionHero";
-import CollectionsSection from "../../../components/CollectionsSection/CollectionsSection"
+import CollectionsSection from "../../../components/CollectionsSection/CollectionsSection";
 export default function Collection() {
   return (
     <>
-   
-     <CollectionHero/>
-      <CollectionsSection/>
+      <CollectionHero />
+      <CollectionsSection />
     </>
   );
 }

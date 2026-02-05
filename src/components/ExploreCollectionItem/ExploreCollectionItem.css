@@ -1,52 +1,50 @@
 .collection-item {
-    width: 100%;
-    position: relative;
-    border-radius: 2rem;
-    overflow: hidden;
-    height: 29rem;
-    cursor: pointer;
+  width: 100%;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  height: 29rem;
+  cursor: pointer;
 }
 
 .collection-item:hover {
-    box-shadow: 1px 1px 20px 0px var(--logo-color);
-
+  box-shadow: 1px 1px 20px 0px var(--logo-color);
 }
-.img-div-collection{
- width: 100%;
- height: 100%;
+.img-div-collection {
+  width: 100%;
+  height: 100%;
 }
 .collection-item img {
-    width: 100%;
-    object-fit:cover;
-    height: 500px;
-
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
 }
 
 .collection-item h3 {
-
-    position: absolute;
-    bottom: 10px;
-    left: 15px;
-    color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
 }
 
 .collection-layer {
-
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.506);
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.506);
+  position: absolute;
 }
-.motion-div2{
-    width: 28.5%;
-}
-
-@media (max-width:800px) {
-
-    .motion-div2{width: 100% !important;}
+.motion-div2 {
+  width: 28.5%;
 }
 
-@media (max-width:1200px) {
+@media (max-width: 800px) {
+  .motion-div2 {
+    width: 100% !important;
+  }
+}
 
-    .motion-div2{width: 40%;}
+@media (max-width: 1200px) {
+  .motion-div2 {
+    width: 40%;
+  }
 }

@@ -9,13 +9,16 @@ export const CalculateStatistic = (data = [], valueKey = null) => {
     return null;
   };
 
-  const hasDate = data.some(item => getDeepValue(item, "date"));
+  const hasDate = data.some((item) => getDeepValue(item, "date"));
   if (!hasDate) {
     return {
       total: valueKey
-        ? data.reduce((sum, item) => sum + (Number(getDeepValue(item, valueKey)) || 0), 0)
+        ? data.reduce(
+            (sum, item) => sum + (Number(getDeepValue(item, valueKey)) || 0),
+            0,
+          )
         : data.length,
-      percentage: 0
+      percentage: 0,
     };
   }
   const now = new Date();
@@ -26,7 +29,7 @@ export const CalculateStatistic = (data = [], valueKey = null) => {
   const yearOfLastMonth = currentMonth === 0 ? currentYear - 1 : currentYear;
 
   const filterByDate = (month, year) =>
-    data.filter(item => {
+    data.filter((item) => {
       const dateValue = getDeepValue(item, "date");
       if (!dateValue) return false;
 

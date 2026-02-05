@@ -30,7 +30,7 @@ export default function UsersDashboard() {
       />
       {users.length > 0 ? (
         users.map((user, index) => {
-          const { id, name, email, img, data, address, status1 } = user;
+          const { id, name, email, img, data, address, status1, role } = user;
           return (
             <UserDashboardItem
               key={id || index}
@@ -41,6 +41,7 @@ export default function UsersDashboard() {
               img={img || DEFAULT_IMG}
               address={address}
               status1={status1}
+              role={role}
             />
           );
         })

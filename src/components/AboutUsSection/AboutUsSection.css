@@ -1,25 +1,23 @@
 .about-us-section {
-    flex-direction: column;
-    width: 100%;
-    padding: 60px 100px;
-    background-color: var(--bg-color);
-
+  flex-direction: column;
+  width: 100%;
+  padding: 60px 100px;
+  background-color: var(--bg-color);
 }
 
 .about-us-section .about-us-div {
-    gap: 100px;
-    margin-top: 50px;
-    width: 100%;
-
+  gap: 100px;
+  margin-top: 50px;
+  width: 100%;
 }
 
-@media (max-width:1000px) {
-    .about-us-div {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+@media (max-width: 1000px) {
+  .about-us-div {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-    .about-us-section {
-        flex-wrap: wrap;
-    }
+  .about-us-section {
+    flex-wrap: wrap;
+  }
 }

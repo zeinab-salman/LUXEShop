@@ -7,24 +7,19 @@
   padding: 100px 0px;
   position: relative;
   padding-left: 150px;
-
-
 }
 
 .title-dash2 h2 {
   color: white !important;
-
 }
 
 .plus-icon {
-
   font-size: 2rem;
-
 }
 
 .head-search {
-  width: 100%;
-
+  width: 90%;
+  flex-direction: column;
 }
 
 .add-btn {
@@ -43,8 +38,8 @@
   background-color: white;
   color: var(--logo-color);
 }
-@media (max-width:1000px) {
-  .sec-products-dash{
+@media (max-width: 1000px) {
+  .sec-products-dash {
     padding: 100px 10px;
   }
 }

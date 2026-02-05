@@ -1,6 +1,5 @@
-.line-section{
-    width: 100%;
-   flex-direction: column;
+.line-section {
+  width: 100%;
+  flex-direction: column;
   padding: 100px;
-
 }

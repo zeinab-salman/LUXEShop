@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/User/Login/Login";
 import Products from "./pages/User/Products/Products";
 import ProductDetails from "./pages/User/ProductDetails/ProductDetails";
-import Register from "./pages/User/Register/Register"
-
+import Register from "./pages/User/Register/Register";
 import Loading from "./pages/Loading/Loading";
 import About from "./pages/User/About/About";
 import Contact from "./pages/User/Contact/Contact";
@@ -15,9 +14,9 @@ import UserOrder from "./pages/User/UserOrder/UserOrder";
 import VerificationCodeModel from "./components/VerificationCodeModel/VerificationCodeModel";
 import CheckoutPage from "./pages/User/CheckoutPage/CheckoutPage";
 import HomeDashboard from "./pages/Dashboard/HomeDashboard/HomeDashboard";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { CartProvider } from "./pages/User/UserCart/CartProvider";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import NavBar from "../src/components/NavBar/NavBar";
 import Footer from "../src/components/Footer/Footer";
 import { useLocation } from "react-router-dom";
@@ -27,7 +26,7 @@ import ProductsDashboard from "./pages/Dashboard/ProductsDashboard/ProductsDashb
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -38,11 +37,17 @@ export default function App() {
   }, []);
 
   const location = useLocation();
-  const hideLayout = ["/HomeDashboard", "/ProductsDashboard", "/OrdersDashboard", "/UsersDashboard"].includes(location.pathname);
+  const hideLayout = [
+    "/HomeDashboard",
+    "/ProductsDashboard",
+    "/OrdersDashboard",
+    "/UsersDashboard",
+  ].includes(location.pathname);
 
-
-  localStorage.setItem('user', JSON.stringify({ username: 'admin', role: 'admin' }));
-
+  localStorage.setItem(
+    "user",
+    JSON.stringify({ username: "admin", role: "admin" }),
+  );
 
   return (
     <>
@@ -50,7 +55,9 @@ export default function App() {
       <CartProvider>
         {!hideLayout && <NavBar />}
 
-        {loading ? <Loading /> :
+        {loading ? (
+          <Loading />
+        ) : (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Login" element={<Login />} />
@@ -63,17 +70,17 @@ export default function App() {
             <Route path="/CheckoutPage" element={<CheckoutPage />} />
             <Route path="/Collection" element={<Collection />} />
             <Route path="/UserOrders" element={<UserOrder />} />
-            <Route path="/VerificationCode" element={<VerificationCodeModel />} />
             <Route
-              path="/HomeDashboard"
-              element={<HomeDashboard />}
+              path="/VerificationCode"
+              element={<VerificationCodeModel />}
             />
+            <Route path="/HomeDashboard" element={<HomeDashboard />} />
 
             <Route path="/ProductsDashboard" element={<ProductsDashboard />} />
             <Route path="/OrdersDashboard" element={<OrdersDashboard />} />
             <Route path="/UsersDashboard" element={<UsersDashboard />} />
           </Routes>
-        }
+        )}
         {!hideLayout && <Footer />}
       </CartProvider>
     </>

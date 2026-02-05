@@ -1,165 +1,151 @@
 .hero-btn {
-    background: linear-gradient(to right, var(--btn-color), #0444a9);
-    color: white;
-    border-radius: 5%;
-    padding: 10px 40px;
-    border: none;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 50px;
-
+  background: linear-gradient(to right, var(--btn-color), #0444a9);
+  color: white;
+  border-radius: 5%;
+  padding: 10px 40px;
+  border: none;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .hero-btn:hover {
-    background-color: white;
-    padding: 12px 42px;
-    transition: 0.1s;
+  background-color: white;
+  padding: 12px 42px;
+  transition: 0.1s;
 }
 
 .details-btn {
-    background: linear-gradient(to right, var(--btn-color), #0444a9);
-    color: white;
-    border-radius: 5%;
-    padding: 15px 146px;
-    border: none;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 50px;
-
+  background: linear-gradient(to right, var(--btn-color), #0444a9);
+  color: white;
+  border-radius: 5%;
+  padding: 15px 146px;
+  border: none;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .details-btn:hover {
-    background-color: white;
-    color: var(--btn-color);
-    transition: 0.1s;
-
+  background-color: white;
+  color: var(--btn-color);
+  transition: 0.1s;
 }
 
 .verification-btn {
-    background: linear-gradient(to right, var(--btn-color), #0444a9);
-    color: white;
-    border-radius: 5%;
-    padding: 15px 6px;
-    border: none;
-    font-weight: bold;
+  background: linear-gradient(to right, var(--btn-color), #0444a9);
+  color: white;
+  border-radius: 5%;
+  padding: 15px 6px;
+  border: none;
+  font-weight: bold;
 }
 
 .verification-btn:hover {
   background-color: white;
-    padding: 12px 42px;
-    transition: 0.1s;
+  padding: 12px 42px;
+  transition: 0.1s;
 }
 
 .product-item-btn {
-    background: linear-gradient(to right, var(--btn-color), #0444a9);
-    color: white;
-    border-radius: 5%;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    margin-top: 10px;
-
+  background: linear-gradient(to right, var(--btn-color), #0444a9);
+  color: white;
+  border-radius: 5%;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .product-item-btn:hover {
-    background: white;
-    color: var(--btn-color);
-    border: 2px solid var(--btn-color);
-    transition: 0.5s;
+  background: white;
+  color: var(--btn-color);
+  border: 2px solid var(--btn-color);
+  transition: 0.5s;
 }
 
 .cart {
-
-    background-color: white;
-    color: var(--btn-color);
-    border-radius: 5%;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    margin-top: 10px;
+  background-color: white;
+  color: var(--btn-color);
+  border-radius: 5%;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .cart:hover {
-    background-color: var(--btn-color);
-    color: white;
-    border: 2px solid white;
+  background-color: var(--btn-color);
+  color: white;
+  border: 2px solid white;
 }
 
 .collection-btn {
-    background-color: var(--bg-color);
-    color: var(--navbar-color);
-    border-radius: 100rem;
-    padding: 10px 40px;
-    border: none;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 50px;
-
+  background-color: var(--bg-color);
+  color: var(--navbar-color);
+  border-radius: 100rem;
+  padding: 10px 40px;
+  border: none;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .collection-btn:hover {
+  background-color: var(--navbar-color);
+  color: white;
 
-    background-color: var(--navbar-color);
-    color: white;
-
-    transition: 0.1s;
-
-
+  transition: 0.1s;
 }
 
 .active {
-    background: linear-gradient(to right, var(--navbar-color), #1e365e);
-    color: white;
+  background: linear-gradient(to right, var(--navbar-color), #1e365e);
+  color: white;
 }
 
 .delete-btn {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
 
-    border-radius: 5%;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 50px;
+  border-radius: 5%;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .delete-btn:hover {
-    background-color: white;
-    color: red;
-    transition: 0.1s;
+  background-color: white;
+  color: red;
+  transition: 0.1s;
 }
 
 .logout-btn {
-    background-color: var(--btn-color);
-    color: white;
-    border-radius: 5%;
-    padding: 10px 10px;
-    border: none;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-
+  background-color: var(--btn-color);
+  color: white;
+  border-radius: 5%;
+  padding: 10px 10px;
+  border: none;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .logout-btn:hover {
+  background-color: white;
+  color: var(--btn-color);
 
-    background-color: white;
-    color: var(--btn-color);
-
-    transition: 0.1s;
-
+  transition: 0.1s;
 }
 
-@media(max-width:1000px) {
+@media (max-width: 1000px) {
+  .hero-btn {
+    margin-top: 10px;
+  }
 
-    .hero-btn {
-        margin-top: 10px;
-    }
-
-    .details-btn {
-
-        padding: 15px 40px;
-    }
+  .details-btn {
+    padding: 15px 40px;
+  }
 }

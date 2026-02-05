@@ -11,8 +11,7 @@ export default function OrdersDashboard() {
 
   useEffect(() => {
     try {
-      const storedData =
-        JSON.parse(localStorage.getItem("all-orders")) || [];
+      const storedData = JSON.parse(localStorage.getItem("all-orders")) || [];
       const completedData =
         JSON.parse(localStorage.getItem("completed-orders")) || [];
 
@@ -31,13 +30,13 @@ export default function OrdersDashboard() {
   const handleOrderCompleted = useCallback(
     (orderId) => {
       const orderToComplete = orders.find(
-        (order) => order.userId.id === orderId
+        (order) => order.userId.id === orderId,
       );
 
       if (!orderToComplete) return;
 
       const updatedOrders = orders.filter(
-        (order) => order.userId.id !== orderId
+        (order) => order.userId.id !== orderId,
       );
 
       const updatedCompletedOrders = [
@@ -46,18 +45,15 @@ export default function OrdersDashboard() {
           ...orderToComplete,
           userId: {
             ...orderToComplete.userId,
-            status: "done",
+            status: "delivered",
           },
         },
       ];
 
-      localStorage.setItem(
-        "all-orders",
-        JSON.stringify(updatedOrders)
-      );
+      localStorage.setItem("all-orders", JSON.stringify(updatedOrders));
       localStorage.setItem(
         "completed-orders",
-        JSON.stringify(updatedCompletedOrders)
+        JSON.stringify(updatedCompletedOrders),
       );
 
       setOrders(updatedOrders);
@@ -66,9 +62,9 @@ export default function OrdersDashboard() {
       setNotification(`Order #${orderId} has been marked as delivered.`);
       setTimeout(() => setNotification(""), 3000);
     },
-    [orders, completedOrders]
+    [orders, completedOrders],
   );
-
+console.log(orders);
   return (
     <section className="orders-dash-section flex-center">
       <MenuComponent />
@@ -80,9 +76,7 @@ export default function OrdersDashboard() {
         type2="title-dash2"
       />
 
-      {notification && (
-        <div className="notification">{notification}</div>
-      )}
+      {notification && <div className="notification">{notification}</div>}
 
       {orders.length > 0 ? (
         orders.map((order, index) => {
@@ -96,6 +90,7 @@ export default function OrdersDashboard() {
           } = firstItem;
 
           return (
+             
             <OrderDashboardItem
               key={id || index}
               id={id}
@@ -110,7 +105,6 @@ export default function OrdersDashboard() {
           );
         })
       ) : (
-     
         <p className="empty-sec">No orders available.</p>
       )}
     </section>

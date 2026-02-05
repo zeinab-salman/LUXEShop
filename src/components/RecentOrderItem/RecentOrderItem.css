@@ -1,36 +1,35 @@
 .recent-order-item {
-    padding: 40px 10px;
-    border-radius: 2rem;
-    color: white;
-
-
-
+  padding: 40px 10px;
+  border-radius: 2rem;
+  color: white;
+  background: linear-gradient(to right, var(--navbar-color), #6b91d7d6);
+  
 }
 
 .recent-order-item ul {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    list-style: none;
-    gap: 100px;
-    margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  list-style: none;
+  gap: 100px;
+  margin-left: 10px;
 }
 
 .motion-div-recent-item {
-    width: 80%;
+  width: 80%;
 }
 
 .motion-div-recent-item ul img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
 }
-@media (max-width:1000px) {
-    .recent-order-item ul{
-        flex-wrap: wrap;
-    
-    }
-    .recent-order-item{
-         box-shadow: 1px 1px 20px 0px var(--bg-color);
-    }
+@media (max-width: 1000px) {
+  .recent-order-item ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .recent-order-item {
+    box-shadow: 1px 1px 20px 0px var(--bg-color);
+  }
 }

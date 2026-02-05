@@ -15,8 +15,8 @@
 .title-dash {
   color: white !important;
 }
-@media (max-width:1000px) {
-  .home-dashboard-section{
+@media (max-width: 1000px) {
+  .home-dashboard-section {
     padding-left: 0px;
   }
 }

@@ -1,6 +1,11 @@
 .stat-section {
-    width: 100%;
-    gap: 40px;
-    padding: 40px 0px;
-    margin-left: 0px;
+  width: 100%;
+  gap: 50px;
+  padding: 40px 0px;
+  margin-left: 0px;
+}
+@media (max-width: 1000px) {
+  .stat-section {
+    padding: 40px 30px;
+  }
 }

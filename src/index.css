@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 h1,
@@ -13,9 +12,8 @@ h3 {
   font-family: "Crimson Text", serif;
   font-weight: bold;
   font-style: normal;
-
 }
-h2{
+h2 {
   font-size: 2.6rem !important;
 }
 .flex-center {
@@ -23,34 +21,30 @@ h2{
   align-items: center;
   justify-content: center;
 }
-.toaster{
-padding:30px 10px !important;
-font-size: larger !important;
-margin-top: 40px !important;
-box-shadow: 1px 1px 20px 0px var(--logo-color) !important;
+.toaster {
+  padding: 30px 10px !important;
+  font-size: larger !important;
+  margin-top: 40px !important;
+  box-shadow: 1px 1px 20px 0px var(--logo-color) !important;
 }
 .glass-effect {
-   
-    background: rgba(255, 255, 255, 0.05) !important; 
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
-    border-radius: 20px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+  border-radius: 20px !important;
 }
 :root {
-
   --logo-color: #3066c0;
   --navbar-color: #121a2b;
   --btn-color: #3c83f6;
   --bg-color: #f8fafc;
-  --bg2-color:#f5f8fc ;
+  --bg2-color: #f5f8fc;
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .flex-center {
-
     flex-wrap: wrap;
   }
-
 }

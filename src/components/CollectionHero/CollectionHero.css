@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: end;
   position: relative;
-
 }
 
 .hero-collection h2 {
@@ -17,7 +16,6 @@
   font-size: 4.3rem !important;
   width: 70%;
   font-weight: bold;
-
 }
 
 .layer-collection {
@@ -28,12 +26,10 @@
   z-index: 0 !important;
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .hero-collection p {
-
     text-align: center;
     width: 24rem;
-
   }
 
   .hero-collection h2 {
@@ -41,8 +37,6 @@
     text-align: center;
     margin-top: 10px;
     width: 15rem;
-
-
   }
 
   .hero-collection {
@@ -50,30 +44,25 @@
   }
 
   .hero-collection p {
-
     text-align: center;
     width: 24rem;
-
   }
-
 }
 
-@media (max-width:524px) {
+@media (max-width: 524px) {
   .hero-collection p {
     font-size: 1rem;
     width: 15rem;
     margin-top: 5px;
   }
-  .hero-collection h2{
+  .hero-collection h2 {
     font-size: small;
-   
   }
 }
 
-@media (max-width:1024px) {
-  
-  .hero-collection h2{
+@media (max-width: 1024px) {
+  .hero-collection h2 {
     font-size: small;
-   width: 100%;
+    width: 100%;
   }
 }

@@ -20,7 +20,6 @@ const ProfileModel = ({ isOpen, onClose }) => {
   });
 
   useEffect(() => {
-
     if (user) {
       setFormData({
         name: user.name || "",
@@ -89,15 +88,31 @@ const ProfileModel = ({ isOpen, onClose }) => {
             initial={{ opacity: 0, rotateY: -45, rotateX: 10, z: -500 }}
             animate={{ opacity: 1, rotateY: 0, rotateX: 0, z: 0 }}
             exit={{ opacity: 0, rotateY: 45, z: -200 }}
-            transition={{ type: "spring", damping: 20, stiffness: 100, duration: 0.6 }}
+            transition={{
+              type: "spring",
+              damping: 20,
+              stiffness: 100,
+              duration: 0.6,
+            }}
           >
             <form className="profile-form" onSubmit={handleSubmit}>
               <IoCloseSharp onClick={onClose} className="close-icon" />
               <h3 className="contact-text">My Profile Information</h3>
 
-              {formData.photo && <img src={formData.photo} alt="profile" className="profile-img" />}
+              {formData.photo && (
+                <img
+                  src={formData.photo}
+                  alt="profile"
+                  className="profile-img"
+                />
+              )}
 
-              <FormInput type="file" name="photo" placeholder="Photo" onChange={handleImgChange} />
+              <FormInput
+                type="file"
+                name="photo"
+                placeholder="Photo"
+                onChange={handleImgChange}
+              />
               <FormInput
                 type="text"
                 name="name"

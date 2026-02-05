@@ -1,23 +1,18 @@
-.orders-dash-section{
-
-background: linear-gradient(to right, var(--navbar-color), #1e365e);
+.orders-dash-section {
+  background: linear-gradient(to right, var(--navbar-color), #1e365e);
   width: 100%;
   flex-direction: column;
   padding-top: 50px;
   gap: 50px;
-  padding: 100px 0px;
+  padding: 150px 0px;
   position: relative;
   padding-left: 150px;
-
-
 }
-.empty-sec{
-    
-    height: 100vh;
-  
+.empty-sec {
+  height: 100vh;
 }
-@media (max-width:1000px) {
-    .orders-dash-section{
-        padding:100px 10px ;
-    }
+@media (max-width: 1000px) {
+  .orders-dash-section {
+    padding: 100px 10px;
+  }
 }

@@ -1,17 +1,21 @@
 .stat-card {
-
-    padding: 40px;
-    border-radius: 2rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, var(--navbar-color), #1e365e);
-    box-shadow: 1px 1px 13px 0px var(--bg-color);
+  padding: 25px;
+  border-radius: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 13px 0px var(--bg-color);
+  background: linear-gradient(to right, var(--navbar-color), #6b91d7d6);
 }
 
 .stat-card p {
-    font-weight: bold;
-    font-size: 1.6rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+@media (max-width: 1000px) {
+  .stat-card {
+    width: 100%;
+  }
 }

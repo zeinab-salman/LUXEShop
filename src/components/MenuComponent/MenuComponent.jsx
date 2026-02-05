@@ -19,10 +19,12 @@ export default function MenuComponent() {
 
   return (
     <>
-    
       <FaListUl className="list-open display-none-icon" onClick={toggleMenu} />
 
-      <nav className={`menu-nav ${menuOpen ? "open" : "display-none"}`} onClick={toggleMenu}>
+      <nav
+        className={`menu-nav ${menuOpen ? "open" : "display-none"}`}
+        onClick={toggleMenu}
+      >
         <ul>
           <li id="logo-link-d">
             LUXE<span id="nav-right-d">SHOP</span>

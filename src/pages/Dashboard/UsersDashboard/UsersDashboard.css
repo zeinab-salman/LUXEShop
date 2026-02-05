@@ -1,6 +1,5 @@
-.users-dash-section{
-
-background: linear-gradient(to right, var(--navbar-color), #1e365e);
+.users-dash-section {
+  background: linear-gradient(to right, var(--navbar-color), #1e365e);
   width: 100%;
   flex-direction: column;
   padding-top: 50px;
@@ -8,11 +7,10 @@ background: linear-gradient(to right, var(--navbar-color), #1e365e);
   padding: 100px 0px;
   position: relative;
   padding-left: 150px;
-height: 100%;
-
+  height: 100%;
 }
-@media (max-width:1000px) {
-    .users-dash-section{
-        padding:100px 10px ;
-    }
+@media (max-width: 1000px) {
+  .users-dash-section {
+    padding: 100px 10px;
+  }
 }

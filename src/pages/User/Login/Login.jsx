@@ -12,42 +12,50 @@ export default function Login() {
   const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { state } = useLocation(); 
-  
-  const [status1, setStatus1] = useState("active");
+  const { state } = useLocation();
 
- 
+  const [status1, setStatus1] = useState("active");
+  const [role, setRole] = useState("user");
   useEffect(() => {
     if (state?.isBlocked !== undefined) {
       setStatus1(state.isBlocked ? "blocked" : "active");
     }
   }, [state?.isBlocked]);
 
+  useEffect(() => {
+    if (state?.isAdmin !== undefined) {
+      setRole(state.isAdmin ? "admin" : "user");
+    }
+  }, [state?.isAdmin]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  
     const users = JSON.parse(localStorage.getItem("users")) || [];
     console.log("Users in LocalStorage:", users);
 
-    
     const user = users.find(
-      (u) => u.email === email.trim() && u.password === password.trim()
+      (u) => u.email === email.trim() && u.password === password.trim(),
     );
     console.log("Found User:", user);
- 
-  if (email === 'admin@gmail.com' && password === 'password') {
-      
-      localStorage.setItem('user', JSON.stringify({ email , role: 'admin' }));
-      navigate('/HomeDashboard'); 
+
+    if (email === "admin@gmail.com" && password === "password") {
+      localStorage.setItem("user", JSON.stringify({ email, role: "admin" }));
+      navigate("/HomeDashboard");
     }
+    if (user.role === "admin") {
+      login("dummy-token", user);
+      navigate("/HomeDashboard");
+      return;
+    }
+
     if (!user) {
       toast.error("There is no account", {
         duration: 4000,
-        position: 'top-center',
+        position: "top-center",
         removeDelay: 1000,
-        toasterId: 'default',
-        className: 'toaster',
+        toasterId: "default",
+        className: "toaster",
       });
       return;
     }
@@ -55,15 +63,14 @@ export default function Login() {
     if (user.status1 === "blocked") {
       toast.error("You are blocked", {
         duration: 4000,
-        position: 'top-center',
+        position: "top-center",
         removeDelay: 1000,
-        toasterId: 'default',
-        className: 'toaster',
+        toasterId: "default",
+        className: "toaster",
       });
       return;
     }
 
-    
     login("dummy-token", user);
     navigate("/VerificationCode");
   };

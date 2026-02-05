@@ -13,7 +13,7 @@ export default function ProductItemDashboard({
   prise,
   id,
   deleteProduct,
-  editProductFromParent
+  editProductFromParent,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -39,7 +39,9 @@ export default function ProductItemDashboard({
       >
         <div className="product-dashboard-item">
           <ul>
-            <li><img src={img} alt="product" /></li>
+            <li>
+              <img src={img} alt="product" />
+            </li>
             <li>{name}</li>
             <li>{categor}</li>
             <li>{date}</li>
@@ -48,7 +50,10 @@ export default function ProductItemDashboard({
               <FaEdit className="product-dash-icon" onClick={handleEditClick} />
             </li>
             <li>
-              <MdDelete className="product-dash-icon" onClick={() => deleteProduct(id)} />
+              <MdDelete
+                className="product-dash-icon"
+                onClick={() => deleteProduct(id)}
+              />
             </li>
           </ul>
         </div>

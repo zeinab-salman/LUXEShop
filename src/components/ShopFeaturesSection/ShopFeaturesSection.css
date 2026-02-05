@@ -1,13 +1,12 @@
 .Shop-features {
-    background-color: white;
-    width: 100%;
-    padding: 60px 100px;
-    gap: 6%;
-
+  background-color: white;
+  width: 100%;
+  padding: 60px 100px;
+  gap: 6%;
 }
 
-@media (max-width:1000px) {
-    .shop-features {
-        flex-wrap: wrap;
-    }
+@media (max-width: 1000px) {
+  .shop-features {
+    flex-wrap: wrap;
+  }
 }
