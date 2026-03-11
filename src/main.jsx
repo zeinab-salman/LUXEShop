@@ -7,8 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import {AuthProvider} from "./components/NavBar/AuthProvider.jsx";
 import { WalletProvider } from './components/WalletModel/WalletProvider.jsx';
+import { StoreData } from './components/Data/StoreData.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <StoreData>
     <AuthProvider>
       <WalletProvider>
     <BrowserRouter>
@@ -18,5 +20,6 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
     </WalletProvider>
      </AuthProvider>
+     </StoreData>
   </StrictMode>
 )
