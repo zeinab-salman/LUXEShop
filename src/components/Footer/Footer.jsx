@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-logo">
 
             <h2>LUXE<span id='logo'>SHOP</span> </h2>
-            <p className=" ">Curating timeless pieces for the modern connoisseur. Quality, craftsmanship, and style that transcends trends.   </p>
+            <p className="logo-footer-text ">Curating timeless pieces for the modern connoisseur. Quality, craftsmanship, and style that transcends trends.   </p>
           </div>
           <p id="join-text"> Join the LuxeShop Family </p>
         </div>

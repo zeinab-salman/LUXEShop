@@ -11,7 +11,7 @@ export default function ShopFeatureComponent({ title, text, divIcon }) {
                 className='motion-div'
             >
                 <div className="feature-div">
-                    <div className="">
+                    <div className="feature-icon-div">
                         {divIcon}
                     </div>
                     <h3>{title}</h3>

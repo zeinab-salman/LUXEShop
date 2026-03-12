@@ -14,7 +14,7 @@
   color: white;
   padding: 140px 70px;
   min-height: 100vh;
-
+  width: 100%;
 }
 
 .image-gallery {
@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 
 .main-img-container {
@@ -31,12 +32,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100% !important;
   height: 400px;
 }
 
 .main-img {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   object-fit: cover;
 }
@@ -158,7 +159,9 @@
   border-radius: 4px;
   background-color: #f9f9f9;
 }
-
+.main-img-container {
+  width: 100%;
+}
 .qty-btn {
   background: none;
   border: none;

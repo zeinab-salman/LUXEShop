@@ -64,16 +64,11 @@ color: white;
   font-weight: 500;
 }
 
-.z-navbar .z-links li .z-home.active {
-  margin-left: -30px;
-}
-
 .z-navbar .z-links li .z-Subscriptions.active {
   margin-right: -30px;
 }
 
 .z-navbar .z-icon {
-
   display: flex;
   align-items: center;
   justify-content: end;
@@ -82,16 +77,10 @@ color: white;
   font-size: 25.5px;
 }
 
-
-
 .cart-icon2 {
-
   color:var(--navbar-color) !important;
   font-size: 25px !important;
   cursor: pointer;
-
-
-
 }
 .cart-icon22{
    color: white!important;
@@ -111,7 +100,6 @@ color: white;
 }
 
 .btn-open {
-
   display: none;
   margin-bottom: 20px;
 }
@@ -127,7 +115,6 @@ color: white;
   margin-top: 270px;
   list-style: none;
   display: flex;
- 
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -165,9 +152,7 @@ font-size: 35px !important;
     color: white;
   }
 
-  .z-navbar .z-links li .z-home.active {
-    margin-left: -22px;
-  }
+  
 
   .z-navbar .z-links li .z-details .active {
     margin-left: 30px;
@@ -192,8 +177,9 @@ font-size: 35px !important;
    .user-list {
     width: 20%;
     margin-top: 0px;
-    right: 0px;
+    right: 15px;
     top: 10px;
+    padding: 10px 44px;
    
   }
   .z-navbar {

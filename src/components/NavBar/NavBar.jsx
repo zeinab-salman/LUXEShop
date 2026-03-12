@@ -14,7 +14,7 @@ import ProfileModel from "../../components/ProfileModel/ProfileModel";
 import WalletModel from "../../components/WalletModel/WalletModel";
 import HomeDashboard from "../../pages/Dashboard/HomeDashboard/HomeDashboard";
 import { useNavigate } from "react-router-dom";
-
+import { MdAdminPanelSettings } from "react-icons/md";
 export default function NavBar() {
   const [isActive, setIsActive] = useState(false);
 
@@ -152,7 +152,7 @@ export default function NavBar() {
                     className="z-details cart-icon2"
                     onClick={listdown}
                   >
-                  Dashboard
+                 <MdAdminPanelSettings/>
                   </NavLink>
                 </li>
                 <li>

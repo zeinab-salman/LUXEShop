@@ -4,8 +4,15 @@
     align-items: center;
     justify-content: center;
 }
-
+.feature-icon-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .feature-div p {
     color: gray;
 
+}
+.feature-div h3,.feature-div p{
+    text-align: center;
 }

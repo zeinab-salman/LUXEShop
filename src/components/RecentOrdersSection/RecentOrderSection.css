@@ -6,3 +6,6 @@
   gap: 50px;
   padding: 50px 50px;
 }
+@media (max-width:1000px) {
+  .recent-orders-section{padding: 50px 10px;}
+}

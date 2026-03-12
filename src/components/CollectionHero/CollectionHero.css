@@ -37,6 +37,7 @@
     text-align: center;
     margin-top: 10px;
     width: 15rem;
+  
   }
 
   .hero-collection {
@@ -57,6 +58,10 @@
   }
   .hero-collection h2 {
     font-size: small;
+   width: 80% !important;
+  }
+  .hero-collection{
+    justify-content: end;
   }
 }
 
