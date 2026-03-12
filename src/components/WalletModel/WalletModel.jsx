@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { useWallet } from "./WalletProvider";
-import "./walletModel.css";
+import "./WalletModel.css";
 import { motion, AnimatePresence } from "framer-motion";
 import FormInput from "../FormInput/FormInput";
 import Button from "../Button/Button";
