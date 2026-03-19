@@ -1,7 +1,7 @@
 import "./ProductDetails.css";
 import { useParams } from "react-router-dom";
 import { ProductsData } from "../../../components/Data/ProductsData";
-import Button from "../../../components/Button/Button";
+import Button from "../../../components/Ui/Button/Button";
 import React, { useState } from "react";
 import img1 from "../../../../public/images/d1.jpg";
 import img2 from "../../../../public/images/d2.jpg";

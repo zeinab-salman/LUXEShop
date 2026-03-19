@@ -1,7 +1,7 @@
 import "./Products.css";
-import ProductCom from "../../../components/productCom/ProductCom";
-import Title from "../../../components/Title/Title";
-import SearchInputComponent from "../../../components/SearchInputComponent/SearchInputComponent";
+import ProductCom from "../../../ProductComcomponents/Ui/productCom/ProductCom";
+import Title from "../../../components/Ui/Title/Title";
+import SearchInputComponent from "../../../components/Ui/SearchInputComponent/SearchInputComponent";
 import { useState, useEffect } from "react";
 export default function Products() {
   const [products, setProducts] = useState(() => {

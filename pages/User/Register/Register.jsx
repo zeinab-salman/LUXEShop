@@ -1,7 +1,7 @@
 import "./Register.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import FormInput from "../../../components/FormInput/FormInput";
+import FormInput from "../../../components/Ui/FormInput/FormInput";
 import { isValidMotionProp, motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { useLocation } from "react-router-dom";

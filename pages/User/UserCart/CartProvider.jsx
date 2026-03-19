@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
-import { useAuth } from "../../../components/NavBar/AuthProvider";
+import { useAuth } from "../../../components/Shared/NavBar/AuthProvider";
 import { useStore } from "../../../components/Data/StoreData";
 const CartContext = createContext();
 

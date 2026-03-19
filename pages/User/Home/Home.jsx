@@ -1,12 +1,12 @@
 import "./Home.css";
-import Hero from "../../../components/Hero/Hero";
-import FeaturedSection from "../../../components/FeaturedSection/FeaturedSection";
-import ShopFeaturesSection from "../../../components/ShopFeaturesSection/ShopFeaturesSection";
-import ExploreCollectionSection from "../../../components/ExploreCollectionSection/ExploreCollectionSection";
+import Hero from "../../../components/Sections/Hero/Hero";
+import FeaturedSection from "../../../components/Sections/FeaturedSection/FeaturedSection";
+import ShopFeaturesSection from "../../../components/Sections/ShopFeaturesSection/ShopFeaturesSection"
+import ExploreCollectionSection from "../../../components/Sections/ExploreCollectionSection/ExploreCollectionSection";
 export default function Home() {
   return (
     <>
-      <Hero />
+    <Hero/>
       <ShopFeaturesSection />
       <FeaturedSection />
       <ExploreCollectionSection />

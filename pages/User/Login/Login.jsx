@@ -2,8 +2,8 @@ import "./Login.css";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import FormInput from "../../../components/FormInput/FormInput";
-import { useAuth } from "../../../components/NavBar/AuthProvider";
+import FormInput from "../../../components/Ui/FormInput/FormInput";
+import { useAuth } from "../../../components/Shared/NavBar/AuthProvider";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 export default function Login() {
