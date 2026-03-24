@@ -3,9 +3,9 @@ export default function ContactInfo({ text, title, divIcon }) {
     return (
         <>
 
-            <div className="contact-info c">
+            <div className="contact-info ">
                 {divIcon}
-                <div>
+                <div className="text-contact-info">
                     <h5>{title}</h5>
                     <p>{text}</p>
                 </div>

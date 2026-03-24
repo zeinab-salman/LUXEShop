@@ -5,20 +5,16 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaClipboardUser } from "react-icons/fa6";
 import { FaClipboardCheck } from "react-icons/fa6";
-import { useAuth } from "./AuthProvider";
+import { useAuth } from "../../../hooks/context/AuthProvider";
 import Button from "../../Ui/Button/Button";
 import { FaUserCircle } from "react-icons/fa";
 import { FaListUl } from "react-icons/fa6";
 import { GiWallet } from "react-icons/gi";
 import ProfileModel from "../../Ui/ProfileModel/ProfileModel";
 import WalletModel from "../../Ui/WalletModel/WalletModel"
-import HomeDashboard from "../../../pages/Dashboard/HomeDashboard/HomeDashboard";
 import { useNavigate } from "react-router-dom";
 import { MdAdminPanelSettings } from "react-icons/md";
 export default function NavBar() {
-  const [isActive, setIsActive] = useState(false);
-
-  ///////
   const navigate = useNavigate();
   const [profileOpen, setProfileOpen] = useState(false);
   const [walletOpen, setWalletOpen] = useState(false);

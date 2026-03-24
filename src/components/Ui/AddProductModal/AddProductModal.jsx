@@ -2,8 +2,8 @@ import "./AddProductModal.css";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCloseSharp } from "react-icons/io5";
-import Button from "../../components/Ui/Button/Button";
-import FormInput from "../../Uicomponents/FormInput/FormInput";
+import Button from "../../Ui/Button/Button";
+import FormInput from "../../Ui/FormInput/FormInput";
 import toast from "react-hot-toast";
 
 const AddProductModal = ({ isOpen, onClose, onAdd }) => {

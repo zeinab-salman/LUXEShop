@@ -1,10 +1,10 @@
 import "./UserCart.css";
 import React from "react";
-import { useCart } from "./CartProvider";
+import { useCart } from "../../../hooks/context/CartProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Title from "../../../components/Title/Title";
-import Button from "../../../components/Button/Button";
+import Title from "../../../components/Ui/Title/Title";
+import Button from "../../../components/Ui/Button/Button";
 export default function UserCart() {
   const {
     prepareForCheckout,

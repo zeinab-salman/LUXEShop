@@ -1,11 +1,11 @@
 import "./Register.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import FormInput from "../../../components/FormInput/FormInput";
-import { isValidMotionProp, motion } from "framer-motion";
+import FormInput from "../../../components/Ui/FormInput/FormInput";
+import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { useLocation } from "react-router-dom";
-import { useStore } from "../../../components/Data/StoreData";
+import { useStore } from "../../../hooks/context/StoreData";
 export default function Register() {
   const { state } = useLocation(); // الحصول على البيانات المرسلة من الصفحة الأخرى
   const isBlocked = state?.isBlocked; // التحقق مما إذا تم إرسال قيمة isBlocked

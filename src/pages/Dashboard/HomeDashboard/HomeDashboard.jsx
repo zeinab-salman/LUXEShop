@@ -1,9 +1,9 @@
-import MenuComponent from "../../../components/MenuComponent/MenuComponent";
-import Title from "../../../components/Title/Title";
-import StatisticSection from "../../../components/StatisticSection/StatisticSection";
-import ChartComponent from "../../../components/ChartComponent/ChartComponent";
+import MenuComponent from "../../../components/Shared/MenuComponent/MenuComponent";
+import Title from "../../../components/Ui/Title/Title";
+import StatisticSection from "../../../components/Sections/StatisticSection/StatisticSection";
+import ChartComponent from "../../../components/Ui/ChartComponent/ChartComponent";
 import "./HomeDashboard.css";
-import RecentOrderSection from "../../../components/RecentOrdersSection/RecentOrderSection";
+import RecentOrderSection from "../../../components/Sections/RecentOrdersSection/RecentOrderSection";
 export default function HomeDashboard() {
   return (
     <>

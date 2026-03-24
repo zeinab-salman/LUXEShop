@@ -4,10 +4,8 @@
   padding: 100px 100px;
   background-color: var(--bg-color);
   min-height: 100vh;
-
 }
 .empty-orders {
-
   text-align: center;
   padding-bottom: 240px;
 }
@@ -94,5 +92,10 @@
 
   .orders-section {
     padding: 20px 30px;
+  }
+}
+@media (max-width: 500px) {
+  .orders-section {
+    padding-top: 150px;
   }
 }

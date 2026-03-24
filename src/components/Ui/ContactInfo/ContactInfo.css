@@ -1,19 +1,27 @@
 .contact-info {
-
-    display: flex;
-    align-items: start;
-    justify-content: start;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
 }
-
-@media (max-width:1000px) {
-    .contact-info {
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .contact-info h5 {
-        width: 100% !important;
-    }
+.contact-info h5 {
+  width: 100% !important;
+  margin-top: 2px;
+}
+@media (max-width: 1000px) {
+  .contact-info {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .text-contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .contact-info h5 {
+    margin-top: 30px;
+  }
 }

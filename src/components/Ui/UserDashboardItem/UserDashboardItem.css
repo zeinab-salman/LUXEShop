@@ -12,8 +12,6 @@
   justify-content: space-between;
   list-style: none;
   margin-left: 10px;
-  
-  
 }
 
 .motion-div-dash-item {
@@ -28,12 +26,14 @@
 @media (max-width: 1000px) {
   .user-dash-item {
     flex-wrap: wrap;
-  }
-  .user-dash-item {
     box-shadow: 1px 1px 20px 0px var(--bg-color);
+    padding: 20px;
   }
+
   .user-dash-item ul {
     flex-wrap: wrap;
     gap: 20px;
+    padding: 0px;
+    max-width: 0px;
   }
 }

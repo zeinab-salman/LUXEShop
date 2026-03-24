@@ -1,5 +1,5 @@
 import "./ProductFilter.css"
-import Button from "../../components/Button/Button"
+import Button from "../../Ui/Button/Button"
 const ProductFilter = ({ categories, activeCategory, onFilter }) => {
     return (
         <div className="filter-buttons flex-center">

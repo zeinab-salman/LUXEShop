@@ -2,7 +2,7 @@ import { FaArrowAltCircleRight, FaCarAlt } from "react-icons/fa";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaArrowRotateRight } from "react-icons/fa6";
 import { FaMusic } from "react-icons/fa6";
-import CircleIcon from "../CircleIcon/CircleIcon";
+import CircleIcon from "../Ui/CircleIcon/CircleIcon";
 export const ShopFeatureComponentData1 = [
   {
     id: 1,

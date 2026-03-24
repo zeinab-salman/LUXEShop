@@ -1,6 +1,6 @@
 import Home from "./pages/User/Home/Home";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import Login from "./pages/User/Login/Login";
 import Products from "./pages/User/Products/Products";
 import ProductDetails from "./pages/User/ProductDetails/ProductDetails";
@@ -15,7 +15,7 @@ import VerificationCodeModel from "./components/Ui/VerificationCodeModel/Verific
 import CheckoutPage from "./pages/User/CheckoutPage/CheckoutPage";
 import HomeDashboard from "./pages/Dashboard/HomeDashboard/HomeDashboard";
 import { useState, useEffect } from "react";
-import { CartProvider } from "./pages/User/UserCart/CartProvider";
+import { CartProvider } from "./hooks/context/CartProvider";
 import { Toaster } from "react-hot-toast";
 import NavBar from "./components/Shared/NavBar/NavBar";
 import Footer from "./components/Shared/Footer/Footer";

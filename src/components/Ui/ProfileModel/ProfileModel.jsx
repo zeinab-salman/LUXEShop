@@ -5,9 +5,9 @@ import { IoCloseSharp } from "react-icons/io5";
 import toast from "react-hot-toast";
 import Button from "../../Ui/Button/Button";
 import FormInput from "../../Ui//FormInput/FormInput";
-import { AuthContext } from "../../Shared/NavBar/AuthProvider";
+import { AuthContext } from "../../../hooks/context/AuthProvider";
 import img1 from "../../../../public/images/profile.jpg";
-import { useStore } from "../../Data/StoreData";
+import { useStore } from "../../../hooks/context/StoreData";
 const ProfileModel = ({ isOpen, onClose }) => {
   const { storeUsers } = useStore();
   const { user } = useContext(AuthContext);

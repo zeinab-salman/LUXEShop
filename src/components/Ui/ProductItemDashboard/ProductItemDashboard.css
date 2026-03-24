@@ -33,20 +33,18 @@
 @media (max-width: 1000px) {
   .product-dashboard-item ul {
     flex-wrap: wrap;
-  
- 
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    list-style: none;
+    gap: 20px;
   }
 
   .product-dashboard-item {
     box-shadow: 1px 1px 20px 0px var(--bg-color);
     width: 100%;
-  }
-  .product-dashboard-item ul {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    list-style: none;
-    gap: 50px;
-    margin-left: 10px;
   }
 }

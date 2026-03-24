@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./UserDashboardItem.css";
 import { motion } from "framer-motion";
-import img1 from "../../../public/images/profile.jpg";
-import Button from "../Button/Button";
+import img1 from "../../../../public/images/profile.jpg";
+import Button from "../../Ui/Button/Button";
 export default function UserDashboardItem({
   id,
   name,

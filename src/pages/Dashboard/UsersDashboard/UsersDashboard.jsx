@@ -1,7 +1,7 @@
 import "./UsersDashboard.css";
-import UserDashboardItem from "../../../components/UserDashboardItem/UserDashboardItem";
-import Title from "../../../components/Title/Title";
-import MenuComponent from "../../../components/MenuComponent/MenuComponent";
+import UserDashboardItem from "../../../components/Ui/UserDashboardItem/UserDashboardItem";
+import Title from "../../../components/Ui/Title/Title";
+import MenuComponent from "../../../components/Shared/MenuComponent/MenuComponent";
 import { useEffect, useState } from "react";
 const DEFAULT_IMG = "https://via.placeholder.com/150";
 export default function UsersDashboard() {

@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
-import { useAuth } from "../../../components/Shared/NavBar/AuthProvider";
-import { useStore } from "../../../components/Data/StoreData";
+import { useAuth } from "../../hooks/context/AuthProvider";
+import { useStore } from "../../hooks/context/StoreData";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -61,6 +61,7 @@ export const CartProvider = ({ children }) => {
 
     const newOrder = {
       id: Date.now(),
+      status: "in-progress",
       items: pendingCheckout,
       total: pendingCheckout.reduce((acc, i) => acc + i.price * i.quantity, 0),
       status: "in progress",

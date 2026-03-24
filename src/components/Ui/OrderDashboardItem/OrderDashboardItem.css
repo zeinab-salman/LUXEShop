@@ -39,6 +39,9 @@
   }
   .order-dash-item ul {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
   }
 }

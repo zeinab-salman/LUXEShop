@@ -1,7 +1,7 @@
 import "./OrdersDashboard.css";
-import OrderDashboardItem from "../../../components/OrderDashboardItem/OrderDashboardItem";
-import Title from "../../../components/Title/Title";
-import MenuComponent from "../../../components/MenuComponent/MenuComponent";
+import OrderDashboardItem from "../../../components/Ui/OrderDashboardItem/OrderDashboardItem";
+import Title from "../../../components/Ui/Title/Title";
+import MenuComponent from "../../../components/Shared/MenuComponent/MenuComponent";
 import { useState, useEffect, useCallback } from "react";
 
 export default function OrdersDashboard() {

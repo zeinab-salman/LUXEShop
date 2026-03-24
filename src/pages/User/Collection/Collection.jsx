@@ -1,6 +1,6 @@
 import "./Collection.css";
-import CollectionHero from "../../../components/CollectionHero/CollectionHero";
-import CollectionsSection from "../../../components/CollectionsSection/CollectionsSection";
+import CollectionHero from "../../../components/Sections/CollectionHero/CollectionHero";
+import CollectionsSection from "../../../components/Sections/CollectionsSection/CollectionsSection";
 export default function Collection() {
   return (
     <>

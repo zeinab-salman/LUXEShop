@@ -43,3 +43,6 @@
   
   }
 }
+@media (max-width: 500px) {
+ .title-text{font-size: 2rem !important;}
+}

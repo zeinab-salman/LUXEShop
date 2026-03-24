@@ -1,12 +1,9 @@
 import "./UserOrder.css";
-import { useCart } from "../UserCart/CartProvider";
-import Button from "../../../components/Button/Button";
-import Title from "../../../components/Title/Title";
-import { MdCancel } from "react-icons/md";
+import { useCart } from "../../../hooks/context/CartProvider";
+import Title from "../../../components/Ui/Title/Title";
 import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
-import SearchInputComponent from "../../../components/SearchInputComponent/SearchInputComponent";
+import SearchInputComponent from "../../../components/Ui/SearchInputComponent/SearchInputComponent";
 import { useLocation, useNavigate } from "react-router-dom";
 export default function UserOrder() {
   const navigate = useNavigate();

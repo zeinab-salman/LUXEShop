@@ -24,10 +24,10 @@ export default function ContactHero() {
               span="Us"
               text=""
             />
-            <TypeWriterText text="ًWe're Here to Help You Shop With Confidence.Questions about an order or a product? Our team is ready to assist you. " type="text1" />
+            <TypeWriterText text="We're Here to Help You Shop With Confidence.Questions about an order or a product? Our team is ready to assist you. " type="text1" />
           </div>
         </motion.div>
-        <Link to={'/About Us'} className="btn-hero"><Button text="About Us" type="hero-btn" /></Link>
+        <Link to={'/About'} className="btn-hero"><Button text="About Us" type="hero-btn" /></Link>
       </section>
 
     </>

@@ -1,7 +1,6 @@
 import "./ContactInformationSection.css";
 import Title from "../../Ui/Title/Title";
 import FormInput from "../../Ui/FormInput/FormInput";
-import Button from "../../Ui/Button/Button";
 import { FaPhone } from "react-icons/fa6";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -9,7 +8,6 @@ import React, { useState } from "react";
 import ContactInfo from "../../Ui/ContactInfo/ContactInfo";
 import CircleIcon from "../../Ui/CircleIcon/CircleIcon";
 import { toast } from "react-hot-toast";
-
 export default function ContactInformationSection() {
   const [formData, setFormData] = useState({
     username: "",

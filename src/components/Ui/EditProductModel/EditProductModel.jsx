@@ -2,8 +2,8 @@ import "./EditProductModel.css";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCloseSharp } from "react-icons/io5";
-import Button from "../../components/Button/Button";
-import FormInput from "../../components/FormInput/FormInput";
+import Button from "../../Ui/Button/Button";
+import FormInput from "../../Ui/FormInput/FormInput";
 import toast from "react-hot-toast";
 const EditProductModel = ({ isOpen, onClose, product, onSave }) => {
   const [formData, setFormData] = useState({

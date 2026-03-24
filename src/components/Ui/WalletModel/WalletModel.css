@@ -36,3 +36,10 @@
     }
 
 }
+@media(max-width:500px) {
+
+    .wallet-container {
+        padding: 170px 10px;
+    }
+
+}

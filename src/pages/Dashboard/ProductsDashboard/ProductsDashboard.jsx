@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import AddProductModal from "../../../components/AddProductModal/AddProductModal";
-import ProductItemDashboard from "../../../components/ProductItemDashboard/ProductItemDashboard";
-import SearchInputComponent from "../../../components/SearchInputComponent/SearchInputComponent";
-import Title from "../../../components/Title/Title";
-import MenuComponent from "../../../components/MenuComponent/MenuComponent";
+import AddProductModal from "../../../components/Ui/AddProductModal/AddProductModal";
+import ProductItemDashboard from "../../../components/Ui/ProductItemDashboard/ProductItemDashboard";
+import SearchInputComponent from "../../../components/Ui/SearchInputComponent/SearchInputComponent";
+import Title from "../../../components/Ui/Title/Title";
+import MenuComponent from "../../../components/Shared/MenuComponent/MenuComponent";
 import { FaCirclePlus } from "react-icons/fa6";
 import "./ProductsDashboard.css";
 

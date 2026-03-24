@@ -27,6 +27,9 @@
   .recent-order-item ul {
     flex-wrap: wrap;
     gap: 20px;
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 0px;
   }
   .recent-order-item {
     box-shadow: 1px 1px 20px 0px var(--bg-color);

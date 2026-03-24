@@ -2,7 +2,7 @@ import "./MenuComponent.css";
 import { MdSpaceDashboard, MdBorderColor, MdPeopleAlt } from "react-icons/md";
 import { FaShirt, FaListUl } from "react-icons/fa6";
 import { NavLink, useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
+import Button from "../../Ui/Button/Button";
 import { useState } from "react";
 
 export default function MenuComponent() {

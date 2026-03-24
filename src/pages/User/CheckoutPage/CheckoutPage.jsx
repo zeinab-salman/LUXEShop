@@ -1,15 +1,13 @@
 import "./CheckoutPage.css";
 import React, { useState } from "react";
-import { useCart } from "../UserCart/CartProvider";
+import { useCart } from "../../../hooks/context/CartProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Title from "../../../components/Title/Title";
-import Button from "../../../components/Button/Button";
-import FormInput from "../../../components/FormInput/FormInput";
+import Title from "../../../components/Ui/Title/Title";
+import Button from "../../../components/Ui/Button/Button";
+import FormInput from "../../../components/Ui/FormInput/FormInput";
 import toast from "react-hot-toast";
-import { useWallet } from "../../../components/WalletModel/WalletProvider";
-import NavBar from "../../../components/NavBar/NavBar";
-import Footer from "../../../components/Footer/Footer";
+import { useWallet } from "../../../hooks/context/WalletProvider";
 export default function CheckoutPage() {
   const navigate = useNavigate();
   const { rewardOrder } = useWallet();

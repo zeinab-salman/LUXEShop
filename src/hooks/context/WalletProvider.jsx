@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../Shared/NavBar/AuthProvider";
+import { AuthContext } from "../../hooks/context/AuthProvider";
 const WalletContext = createContext();
-
 const defaultWallet = () => ({
   balance: 0,
   transactions: [],

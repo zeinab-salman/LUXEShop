@@ -1,14 +1,14 @@
 import "./ProductDetails.css";
 import { useParams } from "react-router-dom";
 import { ProductsData } from "../../../components/Data/ProductsData";
-import Button from "../../../components/Button/Button";
+import Button from "../../../components/Ui/Button/Button";
 import React, { useState } from "react";
 import img1 from "../../../../public/images/d1.jpg";
 import img2 from "../../../../public/images/d2.jpg";
 import img3 from "../../../../public/images/d3.jpg";
 import img4 from "../../../../public/images/d4.jpg";
 import img5 from "../../../../public/images/d5.jpg";
-import { useCart } from "../UserCart/CartProvider";
+import { useCart } from "../../../hooks/context/CartProvider";
 export default function ProductDetails() {
   const { addToCart } = useCart();
 

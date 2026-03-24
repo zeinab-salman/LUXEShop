@@ -53,3 +53,12 @@
     padding: 170px 30px;
   }
 }
+@media (max-width: 500px) {
+  .edit-img {
+    width: 100px;
+    height: 100px;
+  }
+  .edit-container {
+    padding: 170px 10px;
+  }
+}
