@@ -64,7 +64,6 @@ export const CartProvider = ({ children }) => {
       status: "in-progress",
       items: pendingCheckout,
       total: pendingCheckout.reduce((acc, i) => acc + i.price * i.quantity, 0),
-      status: "in progress",
       date: new Date().toLocaleDateString(),
     };
     storeOrders(newOrder);
